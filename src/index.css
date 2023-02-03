@@ -1,4 +1,6 @@
-/* --------- Resets --------- */
+/* ---------        --------- */
+/*           Resets           */
+/* ---------        --------- */
 *,
 *:is(::before, ::after) {
   box-sizing: border-box;
@@ -69,4 +71,38 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ---------        --------- */
+/*      Utility Classes       */
+/* ---------        --------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  /* center content horizontally in container, with margin on sides */
+  padding-inline: 2rem;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
