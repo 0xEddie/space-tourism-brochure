@@ -74,6 +74,32 @@ select {
 }
 
 /* ---------        --------- */
+/*     Custom Properties      */
+/* ---------        --------- */
+
+:root {
+  /* colors */
+  --clr-dark: 230 35% 7%;
+  --clr-accent: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+}
+
+/* ---------        --------- */
 /*      Utility Classes       */
 /* ---------        --------- */
 
@@ -94,6 +120,11 @@ select {
   max-width: 80rem;
 }
 
+/* in a flow container, add a margin-top gap to all children except first-child */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-gap, 1rem);
+}
+
 /* screen-reader only */
 .sr-only {
   position: absolute;
@@ -105,4 +136,104 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-accent {
+  background-color: hsl(var(--clr-accent));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.txt-dark {
+  color: hsl(var(--clr-dark));
+}
+.txt-accent {
+  color: hsl(var(--clr-accent));
+}
+.txt-white {
+  color: hsl(var(--clr-white));
+}
+
+/* typography */
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+.letr-spacing-3 {
+  letter-spacing: 4.75px;
+}
+.letr-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letr-spacing-1 {
+  letter-spacing: 2.35px;
+}
+
+.uprcase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+/* ---------        --------- */
+/*      Style Defaults        */
+/* ---------        --------- */
+
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fs-400);
 }
