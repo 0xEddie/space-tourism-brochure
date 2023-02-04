@@ -67,14 +67,14 @@ const proudOfThisFunc = () => {
 
 ### Continued Development
 
-Concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Using ARIA properties to create accomadative accessible websites seems to be a very large topic.
+- Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
 
 ### Useful Resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Reduce rendering load of animated box shadows by 10x](https://tobiasahlin.com/blog/how-to-animate-box-shadow/) - Using transform on an element's box-shadow is _extremely_ compute intensive. Using transform on that element's `::after` psuedoelement instead (to create a hover outline effect) is a significantly better practice.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Twitter - [@0x_eddie](https://www.twitter.com/0x_eddie)
+- Website -
