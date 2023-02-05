@@ -49,13 +49,18 @@ Users should be able to:
 
 ### What I Learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Easy way to create a button or link that:
 
-Important code snippets:
+- is circular
+- has text centered within it
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.button-or-anchor {
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
 ```
 
