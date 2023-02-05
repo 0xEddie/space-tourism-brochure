@@ -74,6 +74,7 @@ const proudOfThisFunc = () => {
 
 - Using ARIA properties to create accomadative accessible websites seems to be a very large topic.
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
+- Not super happy with the size of `index.css`, it's a little unwieldly to scroll around in.
 
 ### Useful Resources
 

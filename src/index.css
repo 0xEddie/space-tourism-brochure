@@ -275,7 +275,7 @@ h6 {
   background: hsl(var(--clr-white) / 0.15);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 250ms ease-in-out, transform 100ms ease-in-out;
+  transition: opacity 400ms ease-out, transform 100ms ease-out;
 }
 
 .large-button:is(:hover, :focus)::after {
@@ -306,7 +306,7 @@ h6 {
   padding: var(--underline-gap, 1rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
-  transition: border-color 200ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: border-color 400ms ease-out;
 }
 
 .underline-indicators > *:where(:hover, :focus) {
