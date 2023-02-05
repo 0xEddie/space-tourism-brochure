@@ -150,13 +150,13 @@ select {
   background-color: hsl(var(--clr-white));
 }
 
-.txt-dark {
+.text-dark {
   color: hsl(var(--clr-dark));
 }
-.txt-accent {
+.text-accent {
   color: hsl(var(--clr-accent));
 }
-.txt-white {
+.text-white {
   color: hsl(var(--clr-white));
 }
 
@@ -172,17 +172,17 @@ select {
   font-family: var(--ff-sans-normal);
 }
 
-.letr-spacing-3 {
+.letter-spacing-3 {
   letter-spacing: 4.75px;
 }
-.letr-spacing-2 {
+.letter-spacing-2 {
   letter-spacing: 2.7px;
 }
-.letr-spacing-1 {
+.letter-spacing-1 {
   letter-spacing: 2.35px;
 }
 
-.uprcase {
+.uppercase {
   text-transform: uppercase;
 }
 
@@ -257,8 +257,8 @@ h6 {
 
 .large-button {
   position: relative;
-  display: grid;
   z-index: 1;
+  display: grid;
   place-items: center;
   padding: 0 2em;
   border-radius: 50%;
@@ -300,20 +300,30 @@ h6 {
   margin-right: 0.5em;
 }
 
+/* Style for buttons for Tabs, Dots, and Numbers */
 .underline-indicators > * {
   cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
+  border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
-  transition: border-color 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: border-color 200ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.underline-indicators > *:is(:hover, :focus) {
+.underline-indicators > *:where(:hover, :focus) {
   border-color: hsl(var(--clr-white) / 0.5);
 }
 
-.underline-indicators > *:is(.active, [aria-selected="true"]) {
+.underline-indicators > *:where(.active, [aria-selected="true"]) {
   border-color: hsl(var(--clr-white));
   color: hsl(var(--clr-white) / 1);
+}
+
+.underline-indicators > *:active {
+  background-image: linear-gradient(
+    0deg,
+    hsl(var(--clr-white) / 0.3) 0%,
+    transparent 20%
+  );
 }
 
 .tab-list {
@@ -334,4 +344,40 @@ h6 {
 
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white) / 1);
+}
+
+.number-indicators {
+  display: flex;
+  --gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-indicators > * {
+  background-color: hsl(var(--clr-dark));
+  color: var(--clr-white);
+  border-radius: 50%;
+  border: 1px solid hsl(var(--clr-white) / 0.25);
+  padding: 0 2rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.number-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+}
+
+.number-indicators > *:where(:hover, :focus) {
+  border-color: hsl(var(--clr-white) / 0.5);
+}
+
+.number-indicators > :active {
+  background-image: radial-gradient(
+    circle at center,
+    transparent 50%,
+    hsl(var(--clr-white) / 0.5) 100%
+  );
 }
