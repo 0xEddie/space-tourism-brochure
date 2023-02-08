@@ -74,7 +74,7 @@ const proudOfThisFunc = () => {
 
 - Using ARIA properties to create accomadative accessible websites seems to be a very large topic.
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
-- Not super happy with the size of `index.css`, it's a little unwieldly to scroll around in.
+- This is a Client Side Rendered (CSR) React app. They are the simplest to set up, but are unperformant (due to the rendering time on the client's browser) and are bad for Search Engine Optimization (SEO) because search engine crawlers can only see the config `index.html` file, and have to wait for React to render. Since this website only contains static, unchanging pages (no user or dynamic information is fetched and displayed), that means this could be refactored to be a Static Site Generated (SSG) application. SSG apps are more performant and better for SEO since they are just static pages rendered at build time, and hosting them is also cheaper. There is a [Vite plugin](https://vite-plugin-ssr.com/pre-rendering) which allows for easy SSG and would be an excellent next step for development.
 
 ### Useful Resources
 
