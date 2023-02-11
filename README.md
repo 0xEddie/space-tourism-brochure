@@ -27,6 +27,11 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
+Additionally:
+
+- Use semantic HTML and styling to aid context for accessibility
+- Implement client side routing to allow responsive navigation between pages (prevents the hang time of requests to server for next page)
+
 ### Screenshots
 
 ![](./screenshot.jpg)
@@ -35,10 +40,9 @@ Users should be able to:
 
 ### Built With
 
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Vite](https://vitejs.dev/) - Front End Developer Tooling
-- [Styled Components](https://styled-components.com/) - For styles
+- [React Router v6](https://reactrouter.com/en/main) - Client side page routing in React apps
 
 ### Development Process
 
@@ -46,6 +50,8 @@ Users should be able to:
 2. Before adding any styles, start scaffolding content in JSX components.
 3. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
 4. Style static components, using CSS grid for element layout.
+
+5. Write JSX components for base page layout and navbar
 
 ### What I Learned
 
@@ -56,17 +62,17 @@ Easy way to create a button or link that:
 
 ```css
 .button-or-anchor {
-  display: grid;
-  place-items: center;
-  padding: 0 2rem;
-  border-radius: 50%;
-  aspect-ratio: 1;
+	display: grid;
+	place-items: center;
+	padding: 0 2rem;
+	border-radius: 50%;
+	aspect-ratio: 1;
 }
 ```
 
 ```js
 const proudOfThisFunc = () => {
-  console.log("🎉");
+	console.log('🎉');
 };
 ```
 
@@ -75,15 +81,14 @@ const proudOfThisFunc = () => {
 - Using ARIA properties to create accomadative accessible websites seems to be a very large topic.
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
 - Refactor site from CSR to SSG
-  - This is a Client Side Rendered (CSR) React app. They are the simplest to set up, but are unperformant (due to the rendering time on the client's browser) and are bad for Search Engine Optimization (SEO) because search engine crawlers can only initially see the config `index.html` file and have to wait for React to render.
-  - Since this website only contains static, unchanging pages (no user or dynamic information is fetched and displayed), that means this could be refactored to be a Static Site Generated (SSG) application. SSG apps are more performant and better for SEO since they are just static pages rendered at build time, and hosting them is also cheaper.
+  - This is a Client Side Rendered (CSR) React app. They are the simplest to set up, but are Not Great in terms of performance (due to the rendering time on the client's browser) and are bad for Search Engine Optimization (SEO). CSR apps are bad for SEO because search engine crawlers can only initially see the config `index.html` file and have to wait for React to render.
+  - Since this website only contains static, unchanging pages (no user or dynamic information is fetched and displayed), that means this could be refactored to be a Static Site Generated (SSG) application. SSG apps are more performant and better for SEO since they are just static pages rendered at build time. Static sites are also cheaper to host.
   - There is a [Vite plugin](https://vite-plugin-ssr.com/pre-rendering) which allows for easy SSG and would be an excellent next step for development.
 
 ### Useful Resources
 
-- [Reduce rendering load of animated box shadows by 10x](https://tobiasahlin.com/blog/how-to-animate-box-shadow/) - Using transform on an element's box-shadow is _extremely_ compute intensive. Using transform on that element's `::after` psuedoelement instead (to create a hover outline effect) is a significantly better practice.
+- [Reduce rendering load of animated box shadows by 10x](https://tobiasahlin.com/blog/how-to-animate-box-shadow/) - Using transform on an element's box-shadow is _extremely_ compute intensive. Using transform on that element's `::after` psuedoelement instead (to create a hover outline effect) is better practice.
 
 ## Author
 
 - Twitter - [@0x_eddie](https://www.twitter.com/0x_eddie)
-- Website -
