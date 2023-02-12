@@ -3,7 +3,7 @@
 /* ---------        --------- */
 *,
 *:is(::before, ::after) {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -17,37 +17,37 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+	margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -55,22 +55,22 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 /* ---------        --------- */
@@ -78,25 +78,25 @@ select {
 /* ---------        --------- */
 
 :root {
-  /* colors */
-  --clr-dark: 230 35% 7%;
-  --clr-accent: 231 77% 90%;
-  --clr-white: 0 0% 100%;
+	/* colors */
+	--clr-dark: 230 35% 7%;
+	--clr-accent: 231 77% 90%;
+	--clr-white: 0 0% 100%;
 
-  /* font-sizes */
-  --fs-900: 9.375rem; /*  h1  150px */
-  --fs-800: 6.25rem; /*   h2  100px */
-  --fs-700: 3.5rem; /*    h3  56px */
-  --fs-600: 2rem; /*      h4  32px */
-  --fs-500: 1.75rem; /*   h5  28px */
-  --fs-400: 1.125rem; /*  p   18px */
-  --fs-300: 1rem; /*      sh1 16px */
-  --fs-200: 0.875rem; /*  sh2 14px */
+	/* font-sizes */
+	--fs-900: 9.375rem; /*  h1  150px */
+	--fs-800: 6.25rem; /*   h2  100px */
+	--fs-700: 3.5rem; /*    h3  56px */
+	--fs-600: 2rem; /*      h4  32px */
+	--fs-500: 1.75rem; /*   h5  28px */
+	--fs-400: 1.125rem; /*  p   18px */
+	--fs-300: 1rem; /*      sh1 16px */
+	--fs-200: 0.875rem; /*  sh2 14px */
 
-  /* font-families */
-  --ff-serif: "Bellefair", serif;
-  --ff-sans-normal: "Barlow", sans-serif;
-  --ff-sans-cond: "Barlow Condensed", sans-serif;
+	/* font-families */
+	--ff-serif: 'Bellefair', serif;
+	--ff-sans-normal: 'Barlow', sans-serif;
+	--ff-sans-cond: 'Barlow Condensed', sans-serif;
 }
 
 /* ---------        --------- */
@@ -104,118 +104,118 @@ select {
 /* ---------        --------- */
 
 .flex {
-  display: flex;
-  gap: var(--gap, 1rem);
+	display: flex;
+	gap: var(--gap, 1rem);
 }
 
 .grid {
-  display: grid;
-  gap: var(--gap, 1rem);
+	display: grid;
+	gap: var(--gap, 1rem);
 }
 
 .container {
-  /* center content horizontally in container, with margin on sides */
-  padding-inline: 2rem;
-  margin-inline: auto;
-  max-width: 80rem;
+	/* center content horizontally in container, with margin on sides */
+	padding-inline: 2rem;
+	margin-inline: auto;
+	max-width: 80rem;
 }
 
 /* in a flow container, add a margin-top gap to all children except first-child */
 .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-gap, 1rem);
+	margin-top: var(--flow-gap, 1rem);
 }
 
 /* screen-reader only */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
 }
 
 /* colors */
 
 .bg-dark {
-  background-color: hsl(var(--clr-dark));
+	background-color: hsl(var(--clr-dark));
 }
 .bg-accent {
-  background-color: hsl(var(--clr-accent));
+	background-color: hsl(var(--clr-accent));
 }
 .bg-white {
-  background-color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-white));
 }
 
 .text-dark {
-  color: hsl(var(--clr-dark));
+	color: hsl(var(--clr-dark));
 }
 .text-accent {
-  color: hsl(var(--clr-accent));
+	color: hsl(var(--clr-accent));
 }
 .text-white {
-  color: hsl(var(--clr-white));
+	color: hsl(var(--clr-white));
 }
 
 /* typography */
 
 .ff-serif {
-  font-family: var(--ff-serif);
+	font-family: var(--ff-serif);
 }
 .ff-sans-cond {
-  font-family: var(--ff-sans-cond);
+	font-family: var(--ff-sans-cond);
 }
 .ff-sans-normal {
-  font-family: var(--ff-sans-normal);
+	font-family: var(--ff-sans-normal);
 }
 
 .letter-spacing-3 {
-  letter-spacing: 4.75px;
+	letter-spacing: 4.75px;
 }
 .letter-spacing-2 {
-  letter-spacing: 2.7px;
+	letter-spacing: 2.7px;
 }
 .letter-spacing-1 {
-  letter-spacing: 2.35px;
+	letter-spacing: 2.35px;
 }
 
 .uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .fs-900 {
-  font-size: var(--fs-900);
+	font-size: var(--fs-900);
 }
 .fs-800 {
-  font-size: var(--fs-800);
+	font-size: var(--fs-800);
 }
 .fs-700 {
-  font-size: var(--fs-700);
+	font-size: var(--fs-700);
 }
 .fs-600 {
-  font-size: var(--fs-600);
+	font-size: var(--fs-600);
 }
 .fs-500 {
-  font-size: var(--fs-500);
+	font-size: var(--fs-500);
 }
 .fs-400 {
-  font-size: var(--fs-400);
+	font-size: var(--fs-400);
 }
 .fs-300 {
-  font-size: var(--fs-300);
+	font-size: var(--fs-300);
 }
 .fs-200 {
-  font-size: var(--fs-200);
+	font-size: var(--fs-200);
 }
 
 .fs-900,
 .fs-800,
 .fs-700,
 .fs-600 {
-  line-height: 1.1;
+	line-height: 1.1;
 }
 
 /* ---------        --------- */
@@ -223,10 +223,10 @@ select {
 /* ---------        --------- */
 
 body {
-  font-family: var(--ff-sans-normal);
-  font-size: var(--fs-400);
-  color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-dark));
+	font-family: var(--ff-sans-normal);
+	font-size: var(--fs-400);
+	color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-dark));
 }
 
 h1,
@@ -235,20 +235,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--fs-400);
+	font-weight: var(--fs-400);
 }
 
 .numbered-title {
-  font-family: var(--ff-sans-cond);
-  font-size: var(--fs-500);
-  text-transform: uppercase;
-  letter-spacing: 4.72px;
+	font-family: var(--ff-sans-cond);
+	font-size: var(--fs-500);
+	text-transform: uppercase;
+	letter-spacing: 4.72px;
 }
 
 .numbered-title span {
-  margin-right: 0.5em;
-  font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
+	margin-right: 0.5em;
+	font-weight: 700;
+	color: hsl(var(--clr-white) / 0.25);
 }
 
 /* ---------        --------- */
@@ -256,128 +256,128 @@ h6 {
 /* ---------        --------- */
 
 .large-button {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  padding: 0 2em;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  text-decoration: none;
+	position: relative;
+	z-index: 1;
+	display: grid;
+	place-items: center;
+	padding: 0 2em;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	text-decoration: none;
 }
 /* https://tobiasahlin.com/blog/how-to-animate-box-shadow/ */
 .large-button::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: hsl(var(--clr-white) / 0.15);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 400ms ease-out, transform 100ms ease-out;
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: hsl(var(--clr-white) / 0.15);
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 400ms ease-out, transform 100ms ease-out;
 }
 
 .large-button:is(:hover, :focus)::after {
-  opacity: 1;
-  transform: scale(1.5);
+	opacity: 1;
+	transform: scale(1.5);
 }
 
 .primary-navigation {
-  --gap: 8rem;
-  --underline-gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	--gap: 8rem;
+	--underline-gap: 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .primary-navigation a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .primary-navigation a > span {
-  font-weight: 700;
-  margin-right: 0.5em;
+	font-weight: 700;
+	margin-right: 0.5em;
 }
 
 /* Style for buttons for Tabs, Dots, and Numbers */
 .underline-indicators > * {
-  cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
-  border: 0;
-  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
-  transition: border-color 400ms ease-out;
+	cursor: pointer;
+	padding: var(--underline-gap, 1rem) 0;
+	border: 0;
+	border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+	transition: border-color 400ms ease-out;
 }
 
 .underline-indicators > *:where(:hover, :focus) {
-  border-color: hsl(var(--clr-white) / 0.5);
+	border-color: hsl(var(--clr-white) / 0.5);
 }
 
-.underline-indicators > *:where(.active, [aria-selected="true"]) {
-  border-color: hsl(var(--clr-white));
-  color: hsl(var(--clr-white) / 1);
+.underline-indicators > *:where(.active, [aria-selected='true']) {
+	border-color: hsl(var(--clr-white));
+	color: hsl(var(--clr-white) / 1);
 }
 
 .underline-indicators > *:active {
-  background-image: linear-gradient(
-    0deg,
-    hsl(var(--clr-white) / 0.3) 0%,
-    transparent 20%
-  );
+	background-image: linear-gradient(
+		0deg,
+		hsl(var(--clr-white) / 0.3) 0%,
+		transparent 20%
+	);
 }
 
 .tab-list {
-  --gap: 2rem;
+	--gap: 2rem;
 }
 
 .dot-indicators > * {
-  cursor: pointer;
-  border: 0;
-  border-radius: 50%;
-  padding: 0.5em;
-  background-color: hsl(var(--clr-white) / 0.25);
+	cursor: pointer;
+	border: 0;
+	border-radius: 50%;
+	padding: 0.5em;
+	background-color: hsl(var(--clr-white) / 0.25);
 }
 
 .dot-indicators > *:is(:hover, :focus) {
-  background-color: hsl(var(--clr-white) / 0.5);
+	background-color: hsl(var(--clr-white) / 0.5);
 }
 
-.dot-indicators > [aria-selected="true"] {
-  background-color: hsl(var(--clr-white) / 1);
+.dot-indicators > [aria-selected='true'] {
+	background-color: hsl(var(--clr-white) / 1);
 }
 
 .number-indicators {
-  display: flex;
-  --gap: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	--gap: 2rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .number-indicators > * {
-  background-color: hsl(var(--clr-dark));
-  color: var(--clr-white);
-  border-radius: 50%;
-  border: 1px solid hsl(var(--clr-white) / 0.25);
-  padding: 0 2rem;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
+	background-color: hsl(var(--clr-dark));
+	color: var(--clr-white);
+	border-radius: 50%;
+	border: 1px solid hsl(var(--clr-white) / 0.25);
+	padding: 0 2rem;
+	aspect-ratio: 1;
+	display: grid;
+	place-items: center;
 }
 
-.number-indicators > [aria-selected="true"] {
-  background-color: hsl(var(--clr-white));
-  color: hsl(var(--clr-dark));
+.number-indicators > [aria-selected='true'] {
+	background-color: hsl(var(--clr-white));
+	color: hsl(var(--clr-dark));
 }
 
 .number-indicators > *:where(:hover, :focus) {
-  border-color: hsl(var(--clr-white) / 0.5);
+	border-color: hsl(var(--clr-white) / 0.5);
 }
 
 .number-indicators > :active {
-  background-image: radial-gradient(
-    circle at center,
-    transparent 50%,
-    hsl(var(--clr-white) / 0.5) 100%
-  );
+	background-image: radial-gradient(
+		circle at center,
+		transparent 50%,
+		hsl(var(--clr-white) / 0.5) 100%
+	);
 }
