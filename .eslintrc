@@ -1,15 +1,16 @@
 {
-  "root": true,
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier",
-    "wesbos"
-  ],
-  "plugins": ["react"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  }
+	"root": true,
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"prettier",
+		"wesbos"
+	],
+	"import/no-extraneous-dependencies": ["error", { "packageDir": "/" }],
+	"plugins": ["react"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	}
 }

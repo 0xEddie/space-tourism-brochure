@@ -14,6 +14,7 @@
     "@fontsource/bellefair": "^4.5.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "typescript": "^4.8.4"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.0.0",
     "eslint-config-wesbos": "3.2.3",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^2.7.1",
     "vite": "^4.1.0"
