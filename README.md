@@ -34,7 +34,9 @@ Additionally:
 
 ### Screenshots
 
-![](./screenshot.jpg)
+#### React Router Component Architecture Draft
+
+![React router component architecture](./src/assets/component-architecture-draft.png)
 
 ## The Build
 
@@ -43,15 +45,17 @@ Additionally:
 - [React](https://reactjs.org/) - JS library
 - [Vite](https://vitejs.dev/) - Front End Developer Tooling
 - [React Router v6](https://reactrouter.com/en/main) - Client side page routing in React apps
+- [Excalidraw](https://excalidraw.com) - Diagram drawing
 
 ### Development Process
 
 1. Examine design file, start planning HTML element architecture and CSS classes to create reusable styles.
 2. Before adding any styles, start scaffolding content in JSX components.
 3. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-4. Style static components, using CSS grid for element layout.
+4. Plan component and routing architecture using Excalidraw.
+5. Style static components, using CSS grid for element layout.
 
-5. Write JSX components for base page layout and navbar
+6. Write JSX components for base page layout and navbar
 
 ### What I Learned
 
@@ -68,12 +72,6 @@ Easy way to create a button or link that:
 	border-radius: 50%;
 	aspect-ratio: 1;
 }
-```
-
-```js
-const proudOfThisFunc = () => {
-	console.log('🎉');
-};
 ```
 
 ### Continued Development
