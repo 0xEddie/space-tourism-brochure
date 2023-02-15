@@ -20,23 +20,23 @@ function Header() {
 			</div>
 			<nav>
 				<ul className="primary-navigation underline-indicators flex">
-					<li className="ff-sans-cond uppercase text-white letter-spacing-2">
-						<a href="./#">
+					<li className="ff-sans-cond uppercase letter-spacing-2">
+						<a href="./#" className="text-white">
 							<span>00</span>Home
 						</a>
 					</li>
-					<li className="ff-sans-cond uppercase text-white letter-spacing-2">
-						<a href="./#">
+					<li className="ff-sans-cond uppercase letter-spacing-2">
+						<a href="./#" className="text-white">
 							<span>01</span>Destination
 						</a>
 					</li>
-					<li className="ff-sans-cond uppercase text-white letter-spacing-2">
-						<a href="./#">
+					<li className="ff-sans-cond uppercase letter-spacing-2">
+						<a href="./#" className="text-white">
 							<span>02</span>Crew
 						</a>
 					</li>
-					<li className="ff-sans-cond uppercase text-white letter-spacing-2">
-						<a href="./#">
+					<li className="ff-sans-cond uppercase letter-spacing-2">
+						<a href="./#" className="text-white">
 							<span>03</span>Technology
 						</a>
 					</li>

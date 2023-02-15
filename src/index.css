@@ -360,3 +360,18 @@ h6 {
 		hsl(var(--clr-white) / 0.5) 100%
 	);
 }
+
+/* ---------        --------- */
+/*      Page Backgrounds      */
+/* ---------        --------- */
+body {
+	background-size: cover;
+	background-position: bottom center;
+}
+
+/* home */
+body > div {
+	background-image: url(/src/assets/home/background-home-mobile.jpg);
+	background-size: cover;
+	background-position: bottom center;
+}
