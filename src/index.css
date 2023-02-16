@@ -367,11 +367,22 @@ h6 {
 body {
 	background-size: cover;
 	background-position: bottom center;
+	background-image: url(/src/assets/home/background-home-mobile.jpg);
 }
 
-/* home */
-body > div {
-	background-image: url(/src/assets/home/background-home-mobile.jpg);
-	background-size: cover;
-	background-position: bottom center;
+@media (min-width: 35rem) {
+	body {
+		background-image: url(/src/assets/home/background-home-tablet.jpg);
+		background-position: center center;
+	}
+}
+
+@media (min-width: 45rem) {
+	body {
+		background-image: url(/src/assets/home/background-home-desktop.jpg);
+	}
+}
+
+.primary-header nav {
+	display: none;
 }
