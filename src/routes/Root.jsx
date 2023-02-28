@@ -10,39 +10,66 @@ export default function Root() {
 function Header() {
 	return (
 		<header className="primary-header flex">
-			<div>
-				{/* wrap img in div, fixes flexbox issue */}
+			{/* wrap img in div, fixes flexbox issue */}
+			<div className="logo-wrapper">
 				<img
 					src="/src/assets/shared/logo.svg"
 					alt="space tourism logo"
 					className="logo"
 				/>
 			</div>
-			<nav>
-				<ul className="primary-navigation underline-indicators flex">
-					<li className="ff-sans-cond uppercase letter-spacing-2">
-						<a href="./#" className="text-white">
-							<span>00</span>Home
-						</a>
-					</li>
-					<li className="ff-sans-cond uppercase letter-spacing-2">
-						<a href="./#" className="text-white">
-							<span>01</span>Destination
-						</a>
-					</li>
-					<li className="ff-sans-cond uppercase letter-spacing-2">
-						<a href="./#" className="text-white">
-							<span>02</span>Crew
-						</a>
-					</li>
-					<li className="ff-sans-cond uppercase letter-spacing-2">
-						<a href="./#" className="text-white">
-							<span>03</span>Technology
-						</a>
-					</li>
-				</ul>
-			</nav>
+			<button className="mobile-nav-toggle" aria-controls="primary-navigation">
+				{/* mobile nav button text only visible to screen readers */}
+				<span className="sr-only" aria-expanded="false">
+					Menu
+				</span>
+			</button>
+			<Navbar />
 		</header>
+	);
+}
+
+function Navbar() {
+	return (
+		<nav>
+			<ul
+				id="primary-navigate"
+				className="primary-navigation underline-indicators flex"
+			>
+				<li>
+					<a
+						href="./#"
+						className="text-white ff-sans-cond uppercase letter-spacing-2"
+					>
+						<span>00</span>Home
+					</a>
+				</li>
+				<li>
+					<a
+						href="./#"
+						className="text-white ff-sans-cond uppercase letter-spacing-2"
+					>
+						<span>01</span>Destination
+					</a>
+				</li>
+				<li>
+					<a
+						href="./#"
+						className="text-white ff-sans-cond uppercase letter-spacing-2"
+					>
+						<span>02</span>Crew
+					</a>
+				</li>
+				<li>
+					<a
+						href="./#"
+						className="text-white ff-sans-cond uppercase letter-spacing-2"
+					>
+						<span>03</span>Technology
+					</a>
+				</li>
+			</ul>
+		</nav>
 	);
 }
 

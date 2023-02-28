@@ -33,6 +33,11 @@
 	gap: var(--gap, 1rem);
 }
 
+.inline-flex {
+	display: inline-flex;
+	gap: var(--gap, 1rem);
+}
+
 .grid {
 	display: grid;
 	gap: var(--gap, 1rem);
@@ -49,21 +54,13 @@
 	text-align: center;
 	display: grid;
 	column-gap: var(--container-gap, 2em);
+	row-gap: var(--container-gap, 2em);
 	place-items: center;
 	padding-inline: 1rem;
-	border: 3px solid limegreen;
 }
 
 .grid-container * {
 	max-width: 50ch;
-}
-
-.grid-container > *:first-child {
-	outline: 1px solid red;
-}
-
-.grid-container > *:last-child {
-	outline: 1px solid yellow;
 }
 
 .grid-container > *:last-child {
@@ -263,11 +260,22 @@ h6 {
 }
 
 .primary-navigation {
-	--gap: 8rem;
 	--underline-gap: 2rem;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	background-color: hsl(var(--clr-white) / 0.04);
+	backdrop-filter: blur(5px);
+}
+
+@media (max-width: 35rem) {
+	.primary-navigation {
+		padding: min(20rem, 15vh) 2rem;
+		flex-direction: column;
+		inset: 0 0 0 30%;
+		position: fixed;
+		z-index: 1000;
+	}
 }
 
 .primary-navigation a {
@@ -362,6 +370,39 @@ h6 {
 }
 
 /* ---------        --------- */
+/*           Header           */
+/* ---------        --------- */
+.primary-header {
+	align-items: center;
+}
+
+.logo-wrapper {
+	/* display: inline-block; */
+	flex: 0 0 auto;
+}
+
+.logo {
+	display: inline-block;
+	width: 40px;
+}
+
+@media (min-width: 35rem) {
+	.primary-header {
+		margin-top: 40px;
+	}
+
+	.logo {
+		width: min-content;
+	}
+}
+
+@media (min-width: 45rem) {
+	.primary-header {
+		margin-top: 40px;
+	}
+}
+
+/* ---------        --------- */
 /*      Page Backgrounds      */
 /* ---------        --------- */
 body {
@@ -381,8 +422,4 @@ body {
 	body {
 		background-image: url(/src/assets/home/background-home-desktop.jpg);
 	}
-}
-
-.primary-header nav {
-	display: none;
 }
