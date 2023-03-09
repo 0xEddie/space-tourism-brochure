@@ -316,6 +316,11 @@ h6 {
 		right: 2rem;
 		top: 2rem;
 		border: 0;
+		background: none;
+		background-image: url(./assets/shared/icon-hamburger.svg);
+		aspect-ratio: 1;
+		width: 1.5rem;
+		background-repeat: no-repeat;
 	}
 
 	.primary-navigation.underline-indicators>* {
