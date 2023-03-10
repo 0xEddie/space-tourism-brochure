@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Root() {
 	return (
 		<div className="app">
-			<a className="skip-to-content" href="#main">Skip to content</a>
+			<a className="jump-to-content" href="#main">Skip to content</a>
 			<Header />
 			<Home />
 		</div>

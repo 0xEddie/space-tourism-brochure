@@ -77,9 +77,28 @@ Easy way to create a button or link that:
 }
 ```
 
+Simple addition to make keyboard navigation of the website easier, using an anchor tag that jumps to the main content of the site. The anchor tag is placed as the first element in the body, which makes it the first item focused when `TAB` is pressed.
+```jsx
+  <a className="jump-to-content" href="#main">Skip to content</a>
+```
+```css
+.jump-to-content {
+	position: absolute;
+	z-index: 9999;
+	background: hsl(var(--clr-white));
+	color: hsl(var(--clr-dark));
+	padding: 0.5em 1em;
+	transform: translateY(-100%);
+	transition: transform 100ms ease-in;
+}
+
+.jump-to-content:focus {
+	transform: translateY(0);
+}
+```
+
 ### Continued Development
 
-- Using ARIA properties to create accomadative accessible websites seems to be a very large topic.
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
 - Refactor site from CSR to SSG
   - This is a Client Side Rendered (CSR) React app. They are the simplest to set up, but are Not Great in terms of performance (due to the rendering time on the client's browser) and are bad for Search Engine Optimization (SEO). CSR apps are bad for SEO because search engine crawlers can only initially see the config `index.html` file and have to wait for React to render.

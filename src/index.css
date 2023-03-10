@@ -115,7 +115,7 @@
 	border: 0;
 }
 
-.skip-to-content {
+.jump-to-content {
 	position: absolute;
 	z-index: 9999;
 	background: hsl(var(--clr-white));
@@ -125,7 +125,7 @@
 	transition: transform 100ms ease-in;
 }
 
-.skip-to-content:focus {
+.jump-to-content:focus {
 	transform: translateY(0);
 }
 
