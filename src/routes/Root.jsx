@@ -44,7 +44,7 @@ function Header() {
 							href="./#"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
-							<span>00</span>Home
+							<span aria-hidden="true">00</span>Home
 						</a>
 					</li>
 					<li>
@@ -52,7 +52,7 @@ function Header() {
 							href="./#"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
-							<span>01</span>Destination
+							<span aria-hidden="true">01</span>Destination
 						</a>
 					</li>
 					<li>
@@ -60,7 +60,7 @@ function Header() {
 							href="./#"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
-							<span>02</span>Crew
+							<span aria-hidden="true">02</span>Crew
 						</a>
 					</li>
 					<li>
@@ -68,7 +68,7 @@ function Header() {
 							href="./#"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
-							<span>03</span>Technology
+							<span aria-hidden="true">03</span>Technology
 						</a>
 					</li>
 				</ul>
@@ -79,8 +79,8 @@ function Header() {
 
 function Home() {
 	return (
-		<div className="grid-container grid-container--home">
-			<main>
+		<main className="grid-container grid-container--home">
+			<div>
 				<h1 className="ff-sans-cond fs-500 letter-spacing-3 uppercase">
 					So, you want to travel to <br />
 					<span className="ff-serif fs-900 text-white">space</span>
@@ -91,7 +91,7 @@ function Home() {
 					back, and relax because we’ll give you a truly out of this world
 					experience!
 				</p>
-			</main>
+			</div>
 			<div>
 				<a
 					href="#"
@@ -100,6 +100,6 @@ function Home() {
 					Explore
 				</a>
 			</div>
-		</div>
+		</main>
 	);
 }
