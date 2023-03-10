@@ -100,6 +100,7 @@
 	margin-top: var(--flow-gap, 1rem);
 }
 
+/* ASSISTIVE STYLING */
 /* screen-reader only */
 .sr-only {
 	position: absolute;
@@ -112,6 +113,14 @@
 	white-space: nowrap;
 	/* added line */
 	border: 0;
+}
+
+.skip-to-content {
+	position: absolute;
+	z-index: 9999;
+	background: hsl(var(--clr-white));
+	color: hsl(var(--clr-dark));
+	padding: 0.5em 1em;
 }
 
 /* colors */

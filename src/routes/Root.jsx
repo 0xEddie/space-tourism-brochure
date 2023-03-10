@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function Root() {
 	return (
 		<div className="app">
+			<a className="skip-to-content" href="#main">Skip to content</a>
 			<Header />
 			<Home />
 		</div>
@@ -79,7 +80,7 @@ function Header() {
 
 function Home() {
 	return (
-		<main className="grid-container grid-container--home">
+		<main className="grid-container grid-container--home" id="main">
 			<div>
 				<h1 className="ff-sans-cond fs-500 letter-spacing-3 uppercase">
 					So, you want to travel to <br />
