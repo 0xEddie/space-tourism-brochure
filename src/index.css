@@ -284,6 +284,16 @@ h6 {
 	transform: scale(1.5);
 }
 
+/* PRIMARY HEADER */
+.primary-header {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
 .primary-navigation {
 	--gap: 8rem;
 	--underline-gap: 2rem;
@@ -296,6 +306,15 @@ h6 {
 
 .mobile-nav-toggle {
 	display: none;
+}
+
+.primary-navigation a {
+	text-decoration: none;
+}
+
+.primary-navigation a>span {
+	font-weight: 700;
+	margin-right: 0.5em;
 }
 
 /* responsive navbar for phone screens */
@@ -351,15 +370,6 @@ h6 {
 				hsl(var(--clr-white) / 0.3) 0%,
 				transparent 50%);
 	}
-}
-
-.primary-navigation a {
-	text-decoration: none;
-}
-
-.primary-navigation a>span {
-	font-weight: 700;
-	margin-right: 0.5em;
 }
 
 /* Style for buttons for Tabs, Dots, and Numbers */
