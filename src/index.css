@@ -218,6 +218,8 @@ body {
 	font-size: var(--fs-400);
 	color: hsl(var(--clr-white));
 	background-color: hsl(var(--clr-dark));
+	line-height: 1.5;
+	overflow-x: hidden;
 }
 
 h1,
@@ -307,6 +309,7 @@ h6 {
 		inset: 0 0 0 30%;
 		position: fixed;
 		z-index: 1000;
+		transform: translateX(100%);
 	}
 
 	.mobile-nav-toggle {
@@ -316,7 +319,7 @@ h6 {
 		right: 2rem;
 		top: 2rem;
 		border: 0;
-		background: none;
+		background: transparent;
 		background-image: url(./assets/shared/icon-hamburger.svg);
 		aspect-ratio: 1;
 		width: 1.5rem;

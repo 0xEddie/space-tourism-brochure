@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function Root() {
 	return (
 		<div className="app">
@@ -8,6 +10,12 @@ export default function Root() {
 }
 
 function Header() {
+	const [mobileNavVisible, setMobileNavVisible] = useState(false)
+
+	function toggleMobileNavVisibility() {
+		setMobileNavVisible(prevVisibility => !prevVisibility)
+	}
+
 	return (
 		<header className="primary-header flex">
 			{/* wrap img in div, fixes flexbox issue */}
@@ -18,58 +26,54 @@ function Header() {
 					className="logo"
 				/>
 			</div>
-			<button className="mobile-nav-toggle" aria-controls="primary-navigation">
+
+			<button className="mobile-nav-toggle" aria-controls="primary-navigation" onClick={toggleMobileNavVisibility}>
 				{/* mobile nav button text only visible to screen readers */}
 				<span className="sr-only" aria-expanded="false">
 					Menu
 				</span>
 			</button>
-			<Navbar />
-		</header>
-	);
-}
-
-function Navbar() {
-	return (
-		<nav>
-			<ul
-				id="primary-navigate"
-				className="primary-navigation underline-indicators flex"
-			>
-				<li>
-					<a
-						href="./#"
-						className="text-white ff-sans-cond uppercase letter-spacing-2"
-					>
-						<span>00</span>Home
-					</a>
-				</li>
-				<li>
-					<a
-						href="./#"
-						className="text-white ff-sans-cond uppercase letter-spacing-2"
-					>
-						<span>01</span>Destination
-					</a>
-				</li>
-				<li>
-					<a
-						href="./#"
-						className="text-white ff-sans-cond uppercase letter-spacing-2"
-					>
-						<span>02</span>Crew
-					</a>
-				</li>
-				<li>
-					<a
-						href="./#"
-						className="text-white ff-sans-cond uppercase letter-spacing-2"
-					>
-						<span>03</span>Technology
-					</a>
-				</li>
-			</ul>
-		</nav>
+			<nav>
+				<ul
+					id="primary-navigate"
+					className="primary-navigation underline-indicators flex"
+					data-visible={mobileNavVisible}
+				>
+					<li>
+						<a
+							href="./#"
+							className="text-white ff-sans-cond uppercase letter-spacing-2"
+						>
+							<span>00</span>Home
+						</a>
+					</li>
+					<li>
+						<a
+							href="./#"
+							className="text-white ff-sans-cond uppercase letter-spacing-2"
+						>
+							<span>01</span>Destination
+						</a>
+					</li>
+					<li>
+						<a
+							href="./#"
+							className="text-white ff-sans-cond uppercase letter-spacing-2"
+						>
+							<span>02</span>Crew
+						</a>
+					</li>
+					<li>
+						<a
+							href="./#"
+							className="text-white ff-sans-cond uppercase letter-spacing-2"
+						>
+							<span>03</span>Technology
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header >
 	);
 }
 
