@@ -336,6 +336,12 @@ h6 {
 		background-image: url(./assets/shared/icon-close.svg);
 	}
 
+	.mobile-nav-toggle:focus-visible {
+		border: 2px solid hsl(var(--clr-white) / 1);
+		outline-offset: 5px;
+		border-radius: 5px;
+	}
+
 	.primary-navigation.underline-indicators>* {
 		border: none;
 	}
