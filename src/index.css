@@ -410,7 +410,7 @@ h6 {
 }
 
 /* responsive navbar for phone screens */
-@media (max-width: 35rem) {
+@media (max-width: 35em) {
 	.primary-navigation {
 		--gap: unset;
 		--underline-gap: 0.5rem;
@@ -464,13 +464,15 @@ h6 {
 	}
 }
 
-@media (min-width: 35em) and (max-width: 45em) {
+@media (min-width: 35em) {
+	.primary-navigation {
+		padding-inline: clamp(3rem, 7vw, 7rem);
+	}
+}
+
+@media (min-width: 35em) and (max-width: 44.99em) {
 	.logo {
 		margin: 1.5rem clamp(1.5rem, 5vw, 2.5rem);
-	}
-
-	.primary-navigation {
-		padding-inline: 3rem;
 	}
 
 	.primary-navigation a>span {
@@ -479,6 +481,23 @@ h6 {
 }
 
 @media (min-width: 45em) {
+
+	/* decorative line between logo and nav */
+	.primary-header::after {
+		content: '';
+		display: block;
+		position: relative;
+		height: 1px;
+		width: 100%;
+		margin-right: -2.5rem;
+		background: hsl(var(--clr-white) / .25);
+		order: 1;
+	}
+
+	nav {
+		order: 2;
+	}
+
 	.primary-navigation {
 		margin-block: 2rem;
 	}
