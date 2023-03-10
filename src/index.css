@@ -310,6 +310,11 @@ h6 {
 		position: fixed;
 		z-index: 1000;
 		transform: translateX(100%);
+		transition: transform 200ms ease-out;
+	}
+
+	.primary-navigation[data-visible="true"] {
+		transform: translateX(0);
 	}
 
 	.mobile-nav-toggle {
@@ -321,9 +326,14 @@ h6 {
 		border: 0;
 		background: transparent;
 		background-image: url(./assets/shared/icon-hamburger.svg);
+		background-position: center;
 		aspect-ratio: 1;
 		width: 1.5rem;
 		background-repeat: no-repeat;
+	}
+
+	.mobile-nav-toggle[data-expanded="true"] {
+		background-image: url(./assets/shared/icon-close.svg);
 	}
 
 	.primary-navigation.underline-indicators>* {

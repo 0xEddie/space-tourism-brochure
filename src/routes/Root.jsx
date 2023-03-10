@@ -27,9 +27,9 @@ function Header() {
 				/>
 			</div>
 
-			<button className="mobile-nav-toggle" aria-controls="primary-navigation" onClick={toggleMobileNavVisibility}>
+			<button className="mobile-nav-toggle" aria-controls="primary-navigation" onClick={toggleMobileNavVisibility} data-expanded={mobileNavVisible}>
 				{/* mobile nav button text only visible to screen readers */}
-				<span className="sr-only" aria-expanded="false">
+				<span className="sr-only" aria-expanded={mobileNavVisible}>
 					Menu
 				</span>
 			</button>
