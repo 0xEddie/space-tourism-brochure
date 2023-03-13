@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function Root() {
 	return (
 		<div className="app">
-			<a className="jump-to-content" href="#main">Skip to content</a>
+			<a className="jump-to-content" href="#main">
+				Skip to content
+			</a>
 			<Header />
 			<Home />
 		</div>
@@ -11,10 +13,11 @@ export default function Root() {
 }
 
 function Header() {
-	const [mobileNavVisible, setMobileNavVisible] = useState(false)
+	// when .mobile-nav-toggle button pressed, toggle visibility of the mobile navbar
+	const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
 	function toggleMobileNavVisibility() {
-		setMobileNavVisible(prevVisibility => !prevVisibility)
+		setMobileNavVisible((prevVisibility) => !prevVisibility);
 	}
 
 	return (
@@ -28,8 +31,14 @@ function Header() {
 				/>
 			</div>
 
-			<button className="mobile-nav-toggle" aria-controls="primary-navigation" onClick={toggleMobileNavVisibility} data-expanded={mobileNavVisible}>
-				{/* mobile nav button text only visible to screen readers */}
+			<button
+				className="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				onClick={toggleMobileNavVisibility}
+				data-expanded={mobileNavVisible}
+				type="button"
+			>
+				{/* span in button only visible to screen readers */}
 				<span className="sr-only" aria-expanded={mobileNavVisible}>
 					Menu
 				</span>
@@ -74,7 +83,7 @@ function Header() {
 					</li>
 				</ul>
 			</nav>
-		</header >
+		</header>
 	);
 }
 
