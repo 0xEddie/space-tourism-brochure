@@ -3,10 +3,12 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
-		"prettier",
-		"wesbos"
+		"wesbos",
+		"prettier"
 	],
-	"import/no-extraneous-dependencies": ["error", { "packageDir": "/" }],
+	"rules": {
+		"import/no-extraneous-dependencies": ["error", { "packageDir": "./" }]
+	},
 	"plugins": ["react"],
 	"parserOptions": {
 		"ecmaFeatures": {
