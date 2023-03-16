@@ -1,5 +1,4 @@
-// TODO: refactor <Home /> to its own component (route?)
-export function Home() {
+export default function Home() {
 	return (
 		<main className="grid-container grid-container--home" id="main">
 			<div>
@@ -15,6 +14,8 @@ export function Home() {
 				</p>
 			</div>
 			<div>
+				{/* TODO refactor <a> to <Link> */}
+				{/* TODO where does this link point to? */}
 				<a
 					href="#"
 					className="large-button uppercase ff-serif text-dark bg-white"

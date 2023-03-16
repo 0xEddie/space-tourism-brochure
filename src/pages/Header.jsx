@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function Header() {
+export default function Header() {
 	// when .mobile-nav-toggle button pressed, toggle visibility of the mobile navbar
 	const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
