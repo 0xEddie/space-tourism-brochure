@@ -15,7 +15,8 @@ export function Header() {
 				<img
 					src="/src/assets/shared/logo.svg"
 					alt="space tourism logo"
-					className="logo" />
+					className="logo"
+				/>
 			</div>
 
 			<button

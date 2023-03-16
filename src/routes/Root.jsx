@@ -1,5 +1,5 @@
+import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
-import { Home } from './Home';
 
 export default function Root() {
 	return (
@@ -8,8 +8,7 @@ export default function Root() {
 				Skip to content
 			</a>
 			<Header />
-			{/* TODO: Replace <Home> with <Outlet> */}
-			<Home />
+			<Outlet />
 		</div>
 	);
 }

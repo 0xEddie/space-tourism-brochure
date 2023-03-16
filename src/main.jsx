@@ -7,9 +7,9 @@ import '@fontsource/bellefair';
 import '@fontsource/barlow';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
+import { Home } from './routes/Home';
 
 // TODO: create error page
-// TODO: add Home as the index element
 // TODO: create, add Destination as child route
 
 const router = createBrowserRouter([
@@ -18,10 +18,10 @@ const router = createBrowserRouter([
 		element: <Root />,
 		// errorElement: <ErrorPage />,
 		children: [
-			// {
-			// 	index: true,
-			// 	element: <Home />
-			// },
+			{
+				index: true,
+				element: <Home />,
+			},
 			{
 				path: '/destination',
 				element: <Root />,
