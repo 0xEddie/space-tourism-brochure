@@ -8,11 +8,20 @@ import '@fontsource/barlow';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
 
+// TODO: create error page
+// TODO: add Home as the index element
+// TODO: create, add Destination as child route
+
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <Root />,
+		// errorElement: <ErrorPage />,
 		children: [
+			// {
+			// 	index: true,
+			// 	element: <Home />
+			// },
 			{
 				path: '/destination',
 				element: <Root />,
