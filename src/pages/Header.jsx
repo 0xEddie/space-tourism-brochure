@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 	// when .mobile-nav-toggle button pressed, toggle visibility of the mobile navbar
@@ -11,6 +12,7 @@ export default function Header() {
 	return (
 		<header className="primary-header flex">
 			{/* Images are wrapped in a div, fixes flexbox issue */}
+			{/* TODO: make logo a link to homepage? */}
 			<div className="logo-wrapper">
 				<img
 					src="/src/assets/shared/logo.svg"
@@ -37,39 +39,38 @@ export default function Header() {
 					className="primary-navigation underline-indicators flex"
 					data-visible={mobileNavVisible}
 				>
-					{/* TODO: refactor <a> tags to <Link> elements */}
 					<li>
-						{/* the index numbers of the pages can be hidden from accessibility tools */}
-						<a
-							href="./#"
+						{/* the index numbers of the pages are hidden from accessibility tools */}
+						<Link
+							to="/"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
 							<span aria-hidden="true">00</span>Home
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="./#"
+						<Link
+							to="destination"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
 							<span aria-hidden="true">01</span>Destination
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="./#"
+						<Link
+							to="crew"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
 							<span aria-hidden="true">02</span>Crew
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="./#"
+						<Link
+							to="technology"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
 						>
 							<span aria-hidden="true">03</span>Technology
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</nav>

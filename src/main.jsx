@@ -8,9 +8,9 @@ import '@fontsource/barlow';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
+import Destination from './pages/Destination';
 
 // TODO: create error page
-// TODO: create, add Destination as child route
 
 const router = createBrowserRouter([
 	{
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/destination',
-				element: <Layout />,
+				element: <Destination />,
 			},
 		],
 	},
