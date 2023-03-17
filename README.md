@@ -1,6 +1,7 @@
 # Space Tourism Website
 
 This is a solution to the space tourism website [challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3), which provides image assets and a style guide in a [Figma file](https://www.figma.com/file/fEvMwK3DALNy5ZiVsY562l/space-tourism-website?node-id=0%3A1&t=uABUmUEvdYazx7ky-1).
+There are no guidelines in the challenge for which technologies to use.
 
 Live demo:
 
@@ -58,7 +59,8 @@ Additionally:
 6. Write JSX components for base page layout and navbar.
 7. Style homepage and navbar, using CSS grid for element layout.
 8. Write components, layout, style for Destination page.
-9. Intrapage tab navigation (with keyboard nav implemented).
+9. Set up React Router for interpage navigation
+10. Intrapage tab navigation (with keyboard nav implemented).
 
 ### What I Learned
 
@@ -78,9 +80,13 @@ Easy way to create a button or link that:
 ```
 
 Simple addition to make keyboard navigation of the website easier, using an anchor tag that jumps to the main content of the site. The anchor tag is placed as the first element in the body, which makes it the first item focused when `TAB` is pressed.
+
 ```jsx
-  <a className="jump-to-content" href="#main">Skip to content</a>
+<a className="jump-to-content" href="#main">
+	Skip to content
+</a>
 ```
+
 ```css
 .jump-to-content {
 	position: absolute;

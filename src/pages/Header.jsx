@@ -10,7 +10,7 @@ export default function Header() {
 
 	return (
 		<header className="primary-header flex">
-			{/* wrap img in div, fixes flexbox issue */}
+			{/* Images are wrapped in a div, fixes flexbox issue */}
 			<div className="logo-wrapper">
 				<img
 					src="/src/assets/shared/logo.svg"
