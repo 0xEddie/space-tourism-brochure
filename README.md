@@ -17,6 +17,7 @@ Live demo:
   - [Continued Development](#continued-development)
   - [Useful Resources](#useful-resources)
 - [Author](#author)
+- [Local Development Setup](#local-development-setup)
 
 ## Overview
 
@@ -118,3 +119,7 @@ Simple addition to make keyboard navigation of the website easier, using an anch
 ## Author
 
 - Twitter - [@0x_eddie](https://www.twitter.com/0x_eddie)
+
+## Local Development Setup
+
+`TODO`

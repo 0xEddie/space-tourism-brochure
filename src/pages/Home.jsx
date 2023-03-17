@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
+
 export default function Home() {
 	return (
-		<main className="grid-container grid-container--home" id="main">
+		<main id="main" className="grid-container grid-container--home">
 			<div>
 				<h1 className="ff-sans-cond fs-500 letter-spacing-3 uppercase">
 					So, you want to travel to <br />
@@ -14,14 +16,13 @@ export default function Home() {
 				</p>
 			</div>
 			<div>
-				{/* TODO refactor <a> to <Link> */}
 				{/* TODO where does this link point to? */}
-				<a
-					href="#"
+				<Link
+					to="/"
 					className="large-button uppercase ff-serif text-dark bg-white"
 				>
 					Explore
-				</a>
+				</Link>
 			</div>
 		</main>
 	);
