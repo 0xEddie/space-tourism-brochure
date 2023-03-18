@@ -3,30 +3,30 @@
 /* ---------        --------- */
 
 :root {
-	/* colors */
+	/* design color palette */
 	--clr-dark: 230 35% 7%;
 	--clr-accent: 231 77% 90%;
 	--clr-white: 0 0% 100%;
 
-	/* font-sizes */
-	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+	/* font sizes */
 	/* h1  150px */
-	--fs-800: clamp(4.5rem, 6vw + 1rem, 6.25rem);
+	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
 	/* h2  100px */
-	--fs-700: clamp(2.5rem, 4vw + 1rem, 3.5rem);
+	--fs-800: clamp(4.5rem, 6vw + 1rem, 6.25rem);
 	/* h3  56px */
-	--fs-600: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+	--fs-700: clamp(2.5rem, 4vw + 1rem, 3.5rem);
 	/* h4  32px */
-	--fs-500: 1.75rem;
+	--fs-600: clamp(1.5rem, 2vw + 1rem, 3.5rem);
 	/* h5  28px */
-	--fs-400: clamp(1rem, 1.125rem, 1.125rem);
+	--fs-500: 1.75rem;
 	/* p   18px */
-	--fs-300: 1rem;
+	--fs-400: clamp(1rem, 1.125rem, 1.125rem);
 	/* sh1 16px */
-	--fs-200: 0.875rem;
+	--fs-300: 1rem;
 	/* sh2 14px */
+	--fs-200: 0.875rem;
 
-	/* font-families */
+	/* font families */
 	--ff-serif: 'Bellefair', serif;
 	--ff-sans-normal: 'Barlow', sans-serif;
 	--ff-sans-cond: 'Barlow Condensed', sans-serif;
@@ -76,6 +76,7 @@
 }
 
 @media (min-width: 45em) {
+	/* TODO: this is fugging up my shid on the destination page */
 	.grid-container {
 		grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
 				1rem,
@@ -91,6 +92,7 @@
 		grid-column: 3;
 	}
 
+	/* TODO: this is fugging up my shid on the homepage */
 	#root {
 		padding-bottom: max(6rem, 15vh);
 		align-items: end;
@@ -249,9 +251,14 @@ h6 {
 }
 
 #root {
-	display: grid;
-	grid-template-rows: min-content 1fr;
 	min-height: 100dvh;
+}
+
+.page-layout {
+	display: grid;
+	/* row 1: header (navbar) */
+	/* row 2: page content */
+	grid-template-rows: min-content 1fr;
 }
 
 .numbered-title {
@@ -404,7 +411,6 @@ h6 {
 
 .description {
 	margin-top: 2rem;
-	/* max-width=444px for large screens */
 	font-family: var(--ff-sans-normal);
 	line-height: var(--fs-600);
 	color: hsl(var(--clr-accent));
@@ -413,7 +419,8 @@ h6 {
 @media (min-width: 45em) {
 	article {
 		text-align: start;
-		max-width: 5rem;
+		/* TODO: max-width=444px for large screens */
+		/* max-width: 5rem; */
 	}
 }
 
@@ -508,6 +515,7 @@ h6 {
 	}
 }
 
+/* navbar styling for tablets */
 @media (min-width: 35em) and (max-width: 44.99em) {
 	.logo {
 		margin: 1.5rem clamp(1.5rem, 5vw, 2.5rem);
@@ -518,8 +526,8 @@ h6 {
 	}
 }
 
+/* decorative line between logo and nav */
 @media (min-width: 45em) {
-	/* decorative line between logo and nav */
 	.primary-header::after {
 		content: '';
 		display: block;
