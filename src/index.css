@@ -18,7 +18,7 @@
 	/* h4  32px */
 	--fs-600: clamp(1.5rem, 2vw + 1rem, 3.5rem);
 	/* h5  28px */
-	--fs-500: 1.75rem;
+	--fs-500: clamp(1.25rem, 1.5vw + 1rem, 1.75rem);
 	/* p   18px */
 	--fs-400: clamp(1rem, 1.125rem, 1.125rem);
 	/* sh1 16px */
