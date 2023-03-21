@@ -1,3 +1,4 @@
+import './Header.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +29,7 @@ export default function Header() {
 				data-expanded={mobileNavVisible}
 				type="button"
 			>
-				{/* span in button only visible to screen readers */}
+				{/* button>span only visible to screen readers */}
 				<span className="sr-only" aria-expanded={mobileNavVisible}>
 					Menu
 				</span>
