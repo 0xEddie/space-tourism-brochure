@@ -1,0 +1,18 @@
+body {
+	background-image: url(/src/assets/destination/background-destination-mobile.jpg);
+	background-size: cover;
+	background-position: bottom center;
+}
+
+@media (min-width: 35em) {
+	body {
+		background-image: url(/src/assets/destination/background-destination-tablet.jpg);
+		background-position: center center;
+	}
+}
+
+@media (min-width: 45em) {
+	body {
+		background-image: url(/src/assets/destination/background-destination-desktop.jpg);
+	}
+}

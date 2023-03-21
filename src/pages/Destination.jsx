@@ -1,6 +1,8 @@
+import './Destination.css';
+
 export default function Destination() {
 	return (
-		<main id="main" className="grid-container-XXX grid-container--dest">
+		<main id="main" className="grid-container grid-container--dest">
 			<h1 className="numbered-title">
 				<span aria-hidden="true">02</span> Pick your destination
 			</h1>
@@ -53,6 +55,7 @@ export default function Destination() {
 					there, take in some history by visiting the Luna 2 and Apollo 11
 					landing sites.
 				</p>
+				<hr />
 
 				<div className="travel-details flex">
 					<div>
