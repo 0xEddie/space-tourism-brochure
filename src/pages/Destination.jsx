@@ -2,17 +2,14 @@ import './Destination.css';
 
 export default function Destination() {
 	return (
-		<main id="main" className="grid-container grid-container--dest">
+		<main id="main" className="grid-container grid-container--dest flow">
 			<h1 className="numbered-title">
 				<span aria-hidden="true">02</span> Pick your destination
 			</h1>
 
 			<img src="/src/assets/destination/image-moon.png" alt="the moon" />
 
-			<div
-				className="destination-nav tab-list underline-indicators flex"
-				role="tablist"
-			>
+			<div className="tab-list underline-indicators flex" role="tablist">
 				<button
 					role="tab"
 					aria-selected="true"
@@ -47,7 +44,7 @@ export default function Destination() {
 				</button>
 			</div>
 
-			<article>
+			<article className="destination-info">
 				<h2 className="ff-serif fs-800 uppercase">Moon</h2>
 				<p className="description">
 					See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -55,17 +52,16 @@ export default function Destination() {
 					there, take in some history by visiting the Luna 2 and Apollo 11
 					landing sites.
 				</p>
-				<hr />
 
 				<div className="travel-details flex">
 					<div>
-						<h4 className="ff-sans-cond fs-200 uppercase text-accent">
+						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
 							avg. distance
 						</h4>
 						<p className="ff-serif fs-500 uppercase">384,400 km</p>
 					</div>
 					<div>
-						<h4 className="ff-sans-cond fs-200 uppercase text-accent">
+						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
 							est. travel time
 						</h4>
 						<p className="ff-serif fs-500 uppercase">3 days</p>

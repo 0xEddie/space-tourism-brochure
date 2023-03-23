@@ -16,9 +16,9 @@
 	/* h3  56px */
 	--fs-700: clamp(2.5rem, 4vw + 1rem, 3.5rem);
 	/* h4  32px */
-	--fs-600: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+	--fs-600: clamp(1.5rem, 3vw + 1rem, 3.5rem);
 	/* h5  28px */
-	--fs-500: clamp(1.25rem, 1.5vw + 1rem, 1.75rem);
+	--fs-500: clamp(1.25rem, 2vw + 1rem, 1.75rem);
 	/* p   18px */
 	--fs-400: clamp(1rem, 1.125rem, 1.125rem);
 	/* sh1 16px */
@@ -65,10 +65,11 @@
 	row-gap: var(--container-gap, 2em);
 	place-items: center;
 	padding-inline: 1rem;
+	padding-bottom: 3rem;
 }
 
 .grid-container * {
-	max-width: 50ch;
+	max-width: 45ch;
 }
 
 /* in a flow container, add a margin-top gap to all children except first-child */
@@ -327,7 +328,7 @@ h6 {
 }
 
 .description {
-	margin-top: 2rem;
+	margin-top: 1rem;
 	font-family: var(--ff-sans-normal);
 	line-height: var(--fs-600);
 	color: hsl(var(--clr-accent));

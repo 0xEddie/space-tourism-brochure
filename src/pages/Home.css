@@ -17,23 +17,23 @@ body {
 	}
 }
 
-.grid-container > *:last-child {
+.grid-container--home > *:last-child {
 	place-self: center;
 }
 
 @media (min-width: 45em) {
-	.grid-container {
+	.grid-container--home {
 		grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
 				1rem,
 				1fr
 			);
 	}
 
-	.grid-container > *:first-child {
+	.grid-container--home > *:first-child {
 		grid-column: 2;
 	}
 
-	.grid-container > *:last-child {
+	.grid-container--home > *:last-child {
 		grid-column: 3;
 	}
 
