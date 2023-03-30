@@ -43,6 +43,14 @@ body {
 	grid-area: content;
 }
 
+@media (mid-width: 35em) {
+	.numbered-title {
+		margin-top: 2rem;
+		/* TODO: why is this not working */
+		justify-self: start;
+	}
+}
+
 .travel-details {
 	flex-direction: column;
 	align-items: center;
