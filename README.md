@@ -65,7 +65,7 @@ Additionally:
 
 ### What I Learned
 
-Easy way to create a button or link that:
+1. Easy way to create a button or link that:
 
 - is circular
 - has text centered within it
@@ -80,7 +80,7 @@ Easy way to create a button or link that:
 }
 ```
 
-Simple addition to make keyboard navigation of the website easier, using an anchor tag that jumps to the main content of the site. The anchor tag is placed as the first element in the body, which makes it the first item focused when `TAB` is pressed.
+2. Simple addition to make keyboard navigation of the website easier, using an anchor tag that jumps to the main content of the site. The anchor tag is placed as the first element in the body, which makes it the first item focused when `TAB` is pressed.
 
 ```jsx
 <a className="jump-to-content" href="#main">
@@ -103,6 +103,19 @@ Simple addition to make keyboard navigation of the website easier, using an anch
 	transform: translateY(0);
 }
 ```
+
+3. CSS organization
+
+One primitive strategy for organizing styling in an app is simply keeping everything in one big file. 
+This is simple, but it can work. I decided against it was annoying to scroll through, and because I would have then had to add a class to each page. That class would be used to specify the background image relative url. 
+
+TODO sample of keeping page styles together? 
+
+If you are using Tailwind CSS, in the tailwind.config you can specify background images per url path. 
+
+I decided to create CSS files per each page's component, but still keep commonly used components (and utility classes, and base styles) together in index.css
+
+TODO screen shot of my components directory contents
 
 ### Continued Development
 
