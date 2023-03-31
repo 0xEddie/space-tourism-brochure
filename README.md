@@ -38,7 +38,7 @@ Additionally:
 
 #### React Router Component Architecture Draft
 
-![React router component architecture](./src/assets/component-architecture-draft.png)
+![React router component architecture](/src/assets/component-architecture-draft.png)
 
 ## The Build
 
@@ -106,16 +106,24 @@ Additionally:
 
 3. CSS organization
 
-One primitive strategy for organizing styling in an app is simply keeping everything in one big file. 
-This is simple, but it can work. I decided against it was annoying to scroll through, and because I would have then had to add a class to each page. That class would be used to specify the background image relative url. 
+One primitive strategy for organizing styling in an app is simply keeping everything in one big file.
+This is simple, but it can work. I decided against it was annoying to scroll through, and because I would have then had to add a class to each page. That class would be used to specify the background image relative url.
 
-TODO sample of keeping page styles together? 
+TODO sample of keeping page styles together?
 
-If you are using Tailwind CSS, in the tailwind.config you can specify background images per url path. 
+If you are using Tailwind CSS, in the tailwind.config you can specify background images per url path.
 
 I decided to create CSS files per each page's component, but still keep commonly used components (and utility classes, and base styles) together in index.css
 
-TODO screen shot of my components directory contents
+![Page styles](/src/assets/page-styles.png)
+
+4. Using the picture tag to use better image formats, while allowing the browser to fallback to older formats if the newer formats are unsupported.
+
+```jsx
+<picture srcSet="/src/assets/crew/image-douglas-hurley.webp" type="image/webp">
+	<img src="/src/assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
+</picture>
+```
 
 ### Continued Development
 
