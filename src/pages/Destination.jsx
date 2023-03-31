@@ -58,13 +58,13 @@ export default function Destination() {
 						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
 							avg. distance
 						</h4>
-						<p className="ff-serif fs-500 uppercase">384,400 km</p>
+						<p className="ff-serif uppercase">384,400 km</p>
 					</div>
 					<div>
 						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
 							est. travel time
 						</h4>
-						<p className="ff-serif fs-500 uppercase">3 days</p>
+						<p className="ff-serif uppercase">3 days</p>
 					</div>
 				</div>
 			</article>
