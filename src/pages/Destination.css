@@ -43,10 +43,9 @@ body {
 	grid-area: content;
 }
 
-@media (mid-width: 35em) {
-	.numbered-title {
+@media (min-width: 35em) {
+	.grid-container > .numbered-title {
 		margin-top: 2rem;
-		/* TODO: why is this not working */
 		justify-self: start;
 	}
 }
