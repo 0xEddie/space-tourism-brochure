@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Destination from './pages/Destination';
+import Crew from './pages/Crew';
 
 // TODO: create error page
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				path: '/destination',
 				element: <Destination />,
+			},
+			{
+				path: '/crew',
+				element: <Crew />,
 			},
 		],
 	},
