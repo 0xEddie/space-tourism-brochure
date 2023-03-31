@@ -125,33 +125,37 @@ I decided to create CSS files per each page's component, but still keep commonly
 </picture>
 ```
 
-5. Strategies for loading dynamic page content
+5.  Strategies for loading dynamic page content
 
-   1. Individual files for each page
+Option 1: Individual files for each page
 
-   - Extremely simple to implement, minimal JavaScript needed.
-   - Hard to maintain and extend - lots of duplicate markup. If new content on any page is added or changed, it is much more work to update the website than just adding/modifying an entry to the CMS (Content Management System) or data.json file.
+    + Extremely simple to implement, minimal JavaScript needed.
+    - Hard to maintain and extend - lots of duplicate markup. If new content on any page is added or changed, it is much more work to update the website than just adding/modifying an entry to the CMS (Content Management System) or data.json file.
 
-   2. Write all content in elements for each page, then hide and unhide the relevant elements using JS as needed.
+Option 2: Write all content in elements for each page, then hide and unhide the relevant elements using JS as needed.
 
-   - Simple to implement.
-   - Bad for performance.
-   - Still hard to maintain and extend for the same reasons as in the previous approach.
+    + Simple to implement.
+    - Bad for performance.
+    - Still hard to maintain and extend for the same reasons as in the previous approach.
 
-   3. Query the CMS (or in the case of this simple web app, the data.json) for the relevant content.
+Option 3: Query the CMS (or in the case of this simple web app, the data.json) for the relevant content.
 
-   - Most scalable and maintainable approach.
-   - Extra complexity to set up and hook into a CMS.
+    + Most scalable and maintainable approach.
+    - Extra complexity to set up and hook into a CMS.
 
 After laying out and styling the content on each page, I decided to use queries to the data.json to dynamically load in content. For a simple static site like this, any of the approaches could be appropriate, I just wanted to practice something a little harder but more extendable.
 
 ### Continued Development
 
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
+
 - Refactor site from CSR to SSG
+
   - This is a Client Side Rendered (CSR) React app. They are the simplest to set up, but are Not Great in terms of performance (due to the rendering time on the client's browser) and are bad for Search Engine Optimization (SEO). CSR apps are bad for SEO because search engine crawlers can only initially see the config `index.html` file and have to wait for React to render.
   - Since this website only contains static, unchanging pages (no user or dynamic information is fetched and displayed), that means this could be refactored to be a Static Site Generated (SSG) application. SSG apps are more performant and better for SEO since they are just static pages rendered at build time. Static sites are also cheaper to host.
   - There is a [Vite plugin](https://vite-plugin-ssr.com/pre-rendering) which allows for easy SSG and would be an excellent next step for development.
+
+- Set up and hook into a CMS (Content Management System) such as [Sanity](https://www.sanity.io/) for site content, instead of querying a data.json file. Using a CMS is often best for easily scaling and managing content for a web app.
 
 ### Useful Resources
 
