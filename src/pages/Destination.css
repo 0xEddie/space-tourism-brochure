@@ -84,6 +84,6 @@ body:has(.grid-container--dest) {
 
 	.travel-details {
 		justify-content: start;
-		--gap: 4rem;
+		--gap: min(4vw, 6rem);
 	}
 }
