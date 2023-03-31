@@ -17,6 +17,10 @@ body:has(.grid-container--dest) {
 	}
 }
 
+.tab-list * {
+	background-color: transparent;
+}
+
 .grid-container--dest {
 	--flow-gap: 2rem;
 	grid-template-areas:
@@ -56,11 +60,6 @@ body:has(.grid-container--dest) {
 }
 
 @media (min-width: 35em) {
-	.grid-container > .numbered-title {
-		margin-top: 2rem;
-		justify-self: start;
-	}
-
 	.travel-details {
 		flex-direction: row;
 		justify-content: space-evenly;

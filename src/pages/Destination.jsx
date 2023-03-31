@@ -13,7 +13,7 @@ export default function Destination() {
 				<button
 					role="tab"
 					aria-selected="true"
-					className="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
 				>
 					Moon
@@ -21,7 +21,7 @@ export default function Destination() {
 				<button
 					role="tab"
 					aria-selected="false"
-					className="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
 				>
 					Mars
@@ -29,7 +29,7 @@ export default function Destination() {
 				<button
 					role="tab"
 					aria-selected="false"
-					className="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
 				>
 					Europa
@@ -37,7 +37,7 @@ export default function Destination() {
 				<button
 					role="tab"
 					aria-selected="false"
-					className="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
 				>
 					Titan
