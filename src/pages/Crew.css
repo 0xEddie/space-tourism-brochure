@@ -16,3 +16,62 @@ body:has(.grid-container--crew) {
 		background-image: url(/src/assets/crew/background-crew-desktop.jpg);
 	}
 }
+
+.grid-container--crew {
+	--flow-gap: 2rem;
+	grid-template-areas:
+		'title'
+		'image'
+		'tabs'
+		'content';
+}
+
+.numbered-title {
+	grid-area: title;
+}
+
+.grid-container--crew > img {
+	grid-area: image;
+	max-width: 60%;
+	border-bottom: 1px solid hsl(var(--clr-white) / 0.3);
+}
+
+.grid-container--crew > .dot-indicators {
+	grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+	grid-area: content;
+}
+
+@media (min-width: 35em) {
+	.grid-container--crew {
+		grid-template-areas:
+			'title'
+			'content'
+			'tabs'
+			'image';
+		padding-bottom: 0;
+	}
+
+	.grid-container--crew > img {
+		align-self: end;
+	}
+}
+
+@media (min-width: 45em) {
+	.grid-container--crew {
+		grid-template-areas:
+			'. title title .'
+			'. content image .'
+			'. tabs image .';
+	}
+
+	.grid-container--crew > .dot-indicators {
+		justify-self: start;
+	}
+
+	.grid-container--crew > img {
+		max-width: 90%;
+	}
+}
