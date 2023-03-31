@@ -156,6 +156,7 @@ After laying out and styling the content on each page, I decided to use queries 
   - There is a [Vite plugin](https://vite-plugin-ssr.com/pre-rendering) which allows for easy SSG and would be an excellent next step for development.
 
 - Set up and hook into a CMS (Content Management System) such as [Sanity](https://www.sanity.io/) for site content, instead of querying a data.json file. Using a CMS is often best for easily scaling and managing content for a web app.
+  - Optionally: Use the npm package `localforage` to create a fake interface to a CMS [like in this React Router example](https://gist.githubusercontent.com/ryanflorence/1e7f5d3344c0db4a8394292c157cd305/raw/f7ff21e9ae7ffd55bfaaaf320e09c6a08a8a6611/contacts.js). This would be a good step for a learning project without worrying about database setup.
 
 ### Useful Resources
 
