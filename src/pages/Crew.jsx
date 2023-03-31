@@ -23,8 +23,10 @@ export default function Crew() {
 			</div>
 
 			<article className="crew-details">
-				<h2 className="fs-600 ff-serif uppercase">Commander</h2>
-				<p className="fs-700 uppercase ff-serif">Douglas Hurley</p>
+				<header className="flow flow--space-small">
+					<h2 className="fs-600 ff-serif uppercase">Commander</h2>
+					<p className="fs-700 uppercase ff-serif">Douglas Hurley</p>
+				</header>
 				<p>
 					Douglas Gerald Hurley is an American engineer, former Marine Corps
 					pilot and former NASA astronaut. He launched into space for the third
@@ -32,10 +34,15 @@ export default function Crew() {
 				</p>
 			</article>
 
-			<img
-				src="/src/assets/crew/image-douglas-hurley.png"
-				alt="Douglas Hurley"
-			/>
+			<picture
+				srcSet="/src/assets/crew/image-douglas-hurley.webp"
+				type="image/webp"
+			>
+				<img
+					src="/src/assets/crew/image-douglas-hurley.png"
+					alt="Douglas Hurley"
+				/>
+			</picture>
 		</main>
 	);
 }

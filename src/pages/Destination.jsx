@@ -7,7 +7,12 @@ export default function Destination() {
 				<span aria-hidden="true">02</span> Pick your destination
 			</h1>
 
-			<img src="/src/assets/destination/image-moon.png" alt="the moon" />
+			<picture
+				srcSet="/src/assets/destination/image-moon.webp"
+				type="image/webp"
+			>
+				<img src="/src/assets/destination/image-moon.png" alt="the moon" />
+			</picture>
 
 			<div className="tab-list underline-indicators flex" role="tablist">
 				<button
@@ -44,7 +49,7 @@ export default function Destination() {
 				</button>
 			</div>
 
-			<article className="destination-info">
+			<article className="destination-info flow">
 				<h2 className="ff-serif fs-800 uppercase">Moon</h2>
 				<p className="description">
 					See our planet as you’ve never seen it before. A perfect relaxing trip

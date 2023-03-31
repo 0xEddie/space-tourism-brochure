@@ -19,6 +19,7 @@ body:has(.grid-container--dest) {
 
 .tab-list * {
 	background-color: transparent;
+	--underline-gap: 0.75rem;
 }
 
 .grid-container--dest {
@@ -34,7 +35,7 @@ body:has(.grid-container--dest) {
 	grid-area: title;
 }
 
-.grid-container--dest > img {
+.grid-container--dest > picture {
 	grid-area: image;
 	max-width: 60%;
 }
@@ -77,7 +78,7 @@ body:has(.grid-container--dest) {
 		/* align-items: start; */
 	}
 
-	.grid-container--dest > img {
+	.grid-container--dest > picture {
 		max-width: 90%;
 	}
 

@@ -73,6 +73,10 @@
 	margin-top: var(--flow-gap, 1rem);
 }
 
+.flow--space-small {
+	--flow-gap: 0.5rem;
+}
+
 /* ASSISTIVE STYLING */
 /* screen-reader only */
 .sr-only {
@@ -230,6 +234,14 @@ h6 {
 	letter-spacing: 4.72px;
 }
 
+@media (min-width: 35em) {
+	.numbered-title {
+		margin-top: 2rem;
+		margin-left: 1rem;
+		justify-self: start;
+	}
+}
+
 .numbered-title span {
 	margin-right: 0.5em;
 	font-weight: 700;
@@ -329,13 +341,6 @@ h6 {
 	line-height: var(--fs-600);
 	color: hsl(var(--clr-accent));
 	max-width: 50ch;
-}
-
-@media (min-width: 35em) {
-	.numbered-title {
-		margin-top: 2rem;
-		justify-self: start;
-	}
 }
 
 @media (min-width: 45em) {

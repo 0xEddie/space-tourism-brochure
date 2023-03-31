@@ -30,7 +30,7 @@ body:has(.grid-container--crew) {
 	grid-area: title;
 }
 
-.grid-container--crew > img {
+.grid-container--crew > picture {
 	grid-area: image;
 	max-width: 60%;
 	border-bottom: 1px solid hsl(var(--clr-white) / 0.3);
@@ -44,6 +44,10 @@ body:has(.grid-container--crew) {
 	grid-area: content;
 }
 
+.crew-details > header > h2 {
+	color: hsl(var(--clr-white) / 0.5);
+}
+
 @media (min-width: 35em) {
 	.grid-container--crew {
 		grid-template-areas:
@@ -54,7 +58,7 @@ body:has(.grid-container--crew) {
 		padding-bottom: 0;
 	}
 
-	.grid-container--crew > img {
+	.grid-container--crew > picture {
 		align-self: end;
 	}
 }
@@ -71,7 +75,7 @@ body:has(.grid-container--crew) {
 		justify-self: start;
 	}
 
-	.grid-container--crew > img {
+	.grid-container--crew > picture {
 		max-width: 90%;
 	}
 }
