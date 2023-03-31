@@ -65,10 +65,10 @@ Additionally:
 
 ### What I Learned
 
-1. Easy way to create a button or link that:
+1.  Easy way to create a button or link that:
 
-- is circular
-- has text centered within it
+        - is circular
+        - has text centered within it
 
 ```css
 .button-or-anchor {
@@ -109,7 +109,7 @@ Additionally:
 One primitive strategy for organizing styling in an app is simply keeping everything in one big file.
 This is simple, but it can work. I decided against it was annoying to scroll through, and because I would have then had to add a class to each page. That class would be used to specify the background image relative url.
 
-TODO sample of keeping page styles together?
+`TODO sample of keeping page styles together?`
 
 If you are using Tailwind CSS, in the tailwind.config you can specify background images per url path.
 
