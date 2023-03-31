@@ -22,7 +22,7 @@ body {
 }
 
 @media (min-width: 45em) {
-	.grid-container--home {
+	.grid-container {
 		grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
 				1rem,
 				1fr
@@ -37,7 +37,7 @@ body {
 		grid-column: 3;
 	}
 
-	#root {
+	.grid-container--home {
 		/* TODO: too much bottom padding imo */
 		padding-bottom: max(6rem, 15vh);
 		align-items: end;

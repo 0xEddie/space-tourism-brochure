@@ -43,17 +43,32 @@ body {
 	grid-area: content;
 }
 
-@media (min-width: 35em) {
-	.grid-container > .numbered-title {
-		margin-top: 2rem;
-		justify-self: start;
-	}
-}
-
 .travel-details {
 	flex-direction: column;
 	align-items: center;
 	border-top: 1px solid hsl(var(--clr-white) / 0.1);
 	padding-top: 2rem;
 	margin-top: 2rem;
+}
+
+@media (min-width: 35em) {
+	.grid-container > .numbered-title {
+		margin-top: 2rem;
+		justify-self: start;
+	}
+
+	.travel-details {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+
+@media (min-width: 45em) {
+	.grid-container--dest {
+		grid-template-areas:
+			'. title title .'
+			'. image tabs .'
+			'. image content .';
+		justify-items: start;
+	}
 }
