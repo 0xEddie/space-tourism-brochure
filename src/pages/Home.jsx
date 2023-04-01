@@ -17,9 +17,8 @@ export default function Home() {
 				</p>
 			</article>
 			<div>
-				{/* TODO where does this link point to? */}
 				<Link
-					to="/"
+					to="destination"
 					className="large-button uppercase ff-serif text-dark bg-white"
 				>
 					Explore
