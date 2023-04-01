@@ -12,10 +12,13 @@ export default function Destination() {
 			</h1>
 
 			<picture
-				srcSet="/src/assets/destination/image-moon.webp"
+				srcSet={destinations[destinationId].images.webp}
 				type="image/webp"
 			>
-				<img src="/src/assets/destination/image-moon.png" alt="the moon" />
+				<img
+					src={destinations[destinationId].images.png}
+					alt={destinations[destinationId].name}
+				/>
 			</picture>
 
 			<div className="tab-list underline-indicators flex" role="tablist">
