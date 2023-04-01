@@ -38,6 +38,7 @@ body:has(.grid-container--dest) {
 .grid-container--dest > picture {
 	grid-area: image;
 	max-width: 60%;
+	align-self: start;
 }
 
 .grid-container--dest > .tab-list {
