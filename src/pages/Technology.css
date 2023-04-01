@@ -1,0 +1,18 @@
+body:has(.grid-container--tech) {
+	background-image: url(/src/assets/technology/background-technology-mobile.jpg);
+	background-size: cover;
+	background-position: bottom center;
+}
+
+@media (min-width: 35em) {
+	body:has(.grid-container--tech) {
+		background-image: url(/src/assets/technology/background-technology-tablet.jpg);
+		background-position: center center;
+	}
+}
+
+@media (min-width: 45em) {
+	body:has(.grid-container--tech) {
+		background-image: url(/src/assets/technology/background-technology-desktop.jpg);
+	}
+}

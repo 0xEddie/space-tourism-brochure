@@ -10,13 +10,13 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
-
-// TODO: create error page
+import Technology from './pages/Technology';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <Layout />,
+		// TODO: create error page
 		// errorElement: <ErrorPage />,
 		children: [
 			{
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
 			{
 				path: '/crew',
 				element: <Crew />,
+			},
+			{
+				path: '/technology',
+				element: <Technology />,
 			},
 		],
 	},
