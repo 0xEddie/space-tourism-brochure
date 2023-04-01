@@ -1,6 +1,10 @@
 import './Destination.css';
+import { useState } from 'react';
+import { destinations } from '../data.json';
 
 export default function Destination() {
+	const [destinationId, setDestinationId] = useState(0);
+
 	return (
 		<main id="main" className="grid-container grid-container--dest flow">
 			<h1 className="numbered-title">
@@ -17,59 +21,64 @@ export default function Destination() {
 			<div className="tab-list underline-indicators flex" role="tablist">
 				<button
 					role="tab"
-					aria-selected="true"
+					aria-selected={destinationId === 0}
 					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
+					onClick={() => setDestinationId(0)}
 				>
 					Moon
 				</button>
 				<button
 					role="tab"
-					aria-selected="false"
+					aria-selected={destinationId === 1}
 					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
+					onClick={() => setDestinationId(1)}
 				>
 					Mars
 				</button>
 				<button
 					role="tab"
-					aria-selected="false"
+					aria-selected={destinationId === 2}
 					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
+					onClick={() => setDestinationId(2)}
 				>
 					Europa
 				</button>
 				<button
 					role="tab"
-					aria-selected="false"
+					aria-selected={destinationId === 3}
 					className="uppercase ff-sans-cond text-accent letter-spacing-2"
 					type="button"
+					onClick={() => setDestinationId(3)}
 				>
 					Titan
 				</button>
 			</div>
 
 			<article className="destination-info flow">
-				<h2 className="ff-serif fs-800 uppercase">Moon</h2>
-				<p className="description">
-					See our planet as you’ve never seen it before. A perfect relaxing trip
-					away to help regain perspective and come back refreshed. While you’re
-					there, take in some history by visiting the Luna 2 and Apollo 11
-					landing sites.
-				</p>
+				<h2 className="ff-serif fs-800 uppercase">
+					{destinations[destinationId].name}
+				</h2>
+				<p className="description">{destinations[destinationId].description}</p>
 
 				<div className="travel-details flex">
 					<div>
 						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
 							avg. distance
 						</h4>
-						<p className="ff-serif uppercase">384,400 km</p>
+						<p className="ff-serif uppercase">
+							{destinations[destinationId].distance}
+						</p>
 					</div>
 					<div>
 						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
 							est. travel time
 						</h4>
-						<p className="ff-serif uppercase">3 days</p>
+						<p className="ff-serif uppercase">
+							{destinations[destinationId].travel}
+						</p>
 					</div>
 				</div>
 			</article>
