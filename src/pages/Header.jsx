@@ -1,8 +1,9 @@
 import './Header.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
+	const path = useLocation();
 	// when .mobile-nav-toggle button pressed, toggle visibility of the mobile navbar
 	const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
@@ -41,8 +42,8 @@ export default function Header() {
 					className="primary-navigation underline-indicators flex"
 					data-visible={mobileNavVisible}
 				>
-					<li>
-						{/* the index numbers of the pages are hidden from accessibility tools */}
+					{/* the index numbers of the pages are hidden from accessibility tools */}
+					<li className={path.pathname === '/' ? 'active' : ''}>
 						<Link
 							to="/"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
@@ -50,7 +51,7 @@ export default function Header() {
 							<span aria-hidden="true">00</span>Home
 						</Link>
 					</li>
-					<li>
+					<li className={path.pathname === '/destination' ? 'active' : ''}>
 						<Link
 							to="destination"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
@@ -58,7 +59,7 @@ export default function Header() {
 							<span aria-hidden="true">01</span>Destination
 						</Link>
 					</li>
-					<li>
+					<li className={path.pathname === '/crew' ? 'active' : ''}>
 						<Link
 							to="crew"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
@@ -66,7 +67,7 @@ export default function Header() {
 							<span aria-hidden="true">02</span>Crew
 						</Link>
 					</li>
-					<li>
+					<li className={path.pathname === '/technology' ? 'active' : ''}>
 						<Link
 							to="technology"
 							className="text-white ff-sans-cond uppercase letter-spacing-2"
