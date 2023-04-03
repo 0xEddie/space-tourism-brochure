@@ -7,7 +7,7 @@ export default function Technology() {
 				<span aria-hidden="true">03</span> Space Launch 101
 			</h1>
 
-			<div className="number-indicators flow" role="tablist">
+			<div className="number-indicators flow row" role="tablist">
 				<button
 					aria-selected
 					type="button"
@@ -35,9 +35,9 @@ export default function Technology() {
 			</div>
 
 			<article className="technology-info">
-				<header className="flow flow--space-small">
+				<header className="flow ">
 					<h2 className="ff-sans-cond fs-300 text-accent letter-spacing-2 uppercase">
-						The terminology
+						The terminology...
 					</h2>
 					<p className="ff-serif fs-700 uppercase">Launch vehicle</p>
 				</header>
