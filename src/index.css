@@ -342,7 +342,7 @@ h6 {
 .description {
 	margin-top: 1rem;
 	font-family: var(--ff-sans-normal);
-	line-height: var(--fs-600);
+	line-height: 2rem;
 	color: hsl(var(--clr-accent));
 	max-width: 50ch;
 }

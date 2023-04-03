@@ -16,3 +16,28 @@ body:has(.grid-container--tech) {
 		background-image: url(/src/assets/technology/background-technology-desktop.jpg);
 	}
 }
+
+.grid-container--tech {
+	--flow-gap: 2rem;
+	grid-template-areas:
+		'title'
+		'image'
+		'tabs'
+		'content';
+}
+
+.numbered-title {
+	grid-area: title;
+}
+
+.grid-container--tech > img {
+	grid-area: image;
+}
+
+.grid-container--tech > .number-indicators {
+	grid-area: tabs;
+}
+
+.grid-container--tech > .tech-details {
+	grid-area: content;
+}
