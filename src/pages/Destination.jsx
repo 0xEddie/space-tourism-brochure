@@ -68,7 +68,7 @@ export default function Destination() {
 
 				<div className="travel-details flex">
 					<div>
-						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
+						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-1">
 							avg. distance
 						</h4>
 						<p className="ff-serif uppercase">
@@ -76,7 +76,7 @@ export default function Destination() {
 						</p>
 					</div>
 					<div>
-						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-2">
+						<h4 className="ff-sans-cond fs-200 uppercase text-accent letter-spacing-1">
 							est. travel time
 						</h4>
 						<p className="ff-serif uppercase">

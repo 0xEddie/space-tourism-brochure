@@ -51,7 +51,7 @@ export default function Crew() {
 					<h2 className="fs-600 ff-serif uppercase">{crew[crewId].role}</h2>
 					<p className="fs-700 uppercase ff-serif">{crew[crewId].name}</p>
 				</header>
-				<p>{crew[crewId].bio}</p>
+				<p className="description">{crew[crewId].bio}</p>
 			</article>
 
 			<picture srcSet={crew[crewId].images.webp} type="image/webp">
