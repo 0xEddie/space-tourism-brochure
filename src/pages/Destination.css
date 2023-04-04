@@ -69,6 +69,7 @@ body:has(.grid-container--dest) {
 }
 
 @media (min-width: 45em) {
+	/* TODO image and article need wider horizontal gap between them */
 	.grid-container--dest {
 		grid-template-areas:
 			'. title title .'

@@ -33,6 +33,7 @@ body:has(.grid-container--crew) {
 .grid-container--crew > picture {
 	grid-area: image;
 	max-width: 60%;
+	/* TODO can this bottom border be img-width plus 30%? */
 	border-bottom: 1px solid hsl(var(--clr-white) / 0.3);
 }
 
@@ -77,6 +78,7 @@ body:has(.grid-container--crew) {
 		justify-items: start;
 	}
 
+	/* TODO image should overlap the title? */
 	.grid-container--crew > picture {
 		max-width: 90%;
 		grid-column: span 2;
