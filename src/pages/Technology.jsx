@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import './Technology.css';
 
 export default function Technology() {
+	const [tabNumber, setTabNumber] = useState(1);
+	const imageClasses = {
+		1: 'img-launch',
+		2: 'img-port',
+		3: 'img-capsule',
+	};
+
 	return (
 		<main id="main" className="grid-container grid-container--tech flow">
 			<h1 className="numbered-title">
@@ -34,7 +42,7 @@ export default function Technology() {
 				</button>
 			</div>
 
-			<article className="technology-info">
+			<article className="tech-details">
 				<header className="flow ">
 					<h2 className="ff-sans-cond fs-300 text-accent letter-spacing-2 uppercase">
 						The terminology...
@@ -52,7 +60,8 @@ export default function Technology() {
 			</article>
 
 			<img
-				src="/src/assets/technology/image-launch-vehicle-landscape.jpg"
+				className={imageClasses[tabNumber]}
+				// src="/src/assets/technology/image-launch-vehicle-landscape.jpg"
 				alt="launching vehicle"
 			/>
 		</main>
