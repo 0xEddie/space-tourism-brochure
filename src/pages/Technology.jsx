@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Technology.css';
+import { technology } from '../data.json';
 
 export default function Technology() {
 	const [tabNumber, setTabNumber] = useState(1);
@@ -47,23 +48,15 @@ export default function Technology() {
 					<h2 className="ff-sans-cond fs-300 text-accent letter-spacing-2 uppercase">
 						The terminology...
 					</h2>
-					<p className="ff-serif fs-700 uppercase">Launch vehicle</p>
+					<p className="ff-serif fs-700 uppercase">
+						{technology[tabNumber - 1].name}
+					</p>
 				</header>
 
-				<p className="description">
-					A launch vehicle or carrier rocket is a rocket-propelled vehicle used
-					to carry a payload from Earth's surface to space, usually to Earth
-					orbit or beyond. Our WEB-X carrier rocket is the most powerful in
-					operation. Standing 150 metres tall, it's quite an awe-inspiring sight
-					on the launch pad!
-				</p>
+				<p className="description">{technology[tabNumber - 1].description}</p>
 			</article>
 
-			<img
-				className={imageClasses[tabNumber]}
-				// src="/src/assets/technology/image-launch-vehicle-landscape.jpg"
-				alt="launching vehicle"
-			/>
+			<img className={imageClasses[tabNumber]} alt="launching vehicle" />
 		</main>
 	);
 }
