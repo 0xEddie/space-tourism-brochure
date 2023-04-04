@@ -71,6 +71,7 @@ body:has(.grid-container--tech) {
 		grid-template-areas:
 			'. title title . .'
 			'. tabs content image .';
+		padding-right: 0;
 	}
 
 	.grid-container--tech > img {

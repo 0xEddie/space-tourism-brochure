@@ -17,26 +17,26 @@ export default function Technology() {
 
 			<div className="number-indicators flow row" role="tablist">
 				<button
-					aria-selected
+					aria-selected={tabNumber === 1}
 					type="button"
 					role="tab"
-					onClick={() => console.log('click 1')}
+					onClick={() => setTabNumber(1)}
 				>
 					1
 				</button>
 				<button
-					aria-selected={false}
+					aria-selected={tabNumber === 2}
 					type="button"
 					role="tab"
-					onClick={() => console.log('click 2')}
+					onClick={() => setTabNumber(2)}
 				>
 					2
 				</button>
 				<button
-					aria-selected={false}
+					aria-selected={tabNumber === 3}
 					type="button"
 					role="tab"
-					onClick={() => console.log('click 3')}
+					onClick={() => setTabNumber(3)}
 				>
 					3
 				</button>
