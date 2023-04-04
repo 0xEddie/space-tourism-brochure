@@ -8,7 +8,7 @@ export default function Destination() {
 	return (
 		<main id="main" className="grid-container grid-container--dest flow">
 			<h1 className="numbered-title">
-				<span aria-hidden="true">02</span> Pick your destination
+				<span aria-hidden="true">01</span> Pick your destination
 			</h1>
 
 			<picture

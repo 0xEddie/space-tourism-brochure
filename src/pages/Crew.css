@@ -65,11 +65,10 @@ body:has(.grid-container--crew) {
 }
 
 @media (min-width: 45em) {
+	/* prettier-ignore */
 	.grid-container--crew {
-		grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(
-				1rem,
-				1fr
-			);
+		grid-template-columns: 
+			minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
 
 		grid-template-areas:
 			'. title title .'
