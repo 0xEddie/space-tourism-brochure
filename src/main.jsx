@@ -11,13 +11,14 @@ import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <Layout />,
 		// TODO: create error page
-		// errorElement: <ErrorPage />,
+		errorElement: <Error />,
 		children: [
 			{
 				index: true,

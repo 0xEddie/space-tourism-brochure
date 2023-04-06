@@ -1,0 +1,5 @@
+body:has(.error-page) {
+	background-image: url(/src/assets/astronaut-floating-in-space-crop.jpg);
+	background-size: cover;
+	background-position: bottom 40% left;
+}
