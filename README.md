@@ -54,14 +54,15 @@ Additionally:
 1. Examine design file, start planning HTML element architecture and CSS classes to create reusable styles.
 2. Before adding any styles, start scaffolding content in JSX components.
 3. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-4. Style static components
+4. Style static components.
 5. Plan component and routing architecture using Excalidraw.
 
 6. Write JSX components for base page layout and navbar.
 7. Style homepage and navbar, using CSS grid for element layout.
 8. Write components, layout, style for Destination page.
-9. Set up React Router for interpage navigation
+9. Set up React Router for interpage navigation.
 10. Intrapage tab navigation (with keyboard nav implemented).
+11. Using Destination page as a basic guide, fill out Crew and Technology pages.
 
 ### What I Learned
 
@@ -107,9 +108,9 @@ Additionally:
 3. CSS organization
 
 One primitive strategy for organizing styling in an app is simply keeping everything in one big file.
-This is simple, but it can work. I decided against it as I started to build out the site because was annoying to scroll through (which is a hint that something can be improved) That class would be used to specify the background image relative url.
+This is simple, but it can work. I decided against it as I started to build out the site because was annoying to scroll through (which is a hint that something can be improved) and cognitively fatiguing to debug.
 
-`TODO sample of keeping page styles together?`
+<!-- `TODO sample of keeping page styles together?` -->
 
 If you are using Tailwind CSS, in the tailwind.config you can specify background images per url path.
 
@@ -117,7 +118,7 @@ I decided to create CSS files per each page's component, but still keep commonly
 
 ![Page styles](/src/assets/page-styles.png)
 
-4. Using the picture tag to use better image formats, while allowing the browser to fallback to older formats if the newer formats are unsupported.
+4. Using the picture tag to use newer and better image formats (like .webp), while allowing the browser to fallback to older formats if the newer formats are unsupported (like .jpg or .png).
 
 ```jsx
 <picture srcSet="/src/assets/crew/image-douglas-hurley.webp" type="image/webp">
@@ -127,18 +128,18 @@ I decided to create CSS files per each page's component, but still keep commonly
 
 5.  Strategies for loading dynamic page content
 
-Option 1: Individual files for each page
+i. Individual files for each page
 
     + Extremely simple to implement, minimal JavaScript needed.
     - Hard to maintain and extend - lots of duplicate markup. If new content on any page is added or changed, it is much more work to update the website than just adding/modifying an entry to the CMS (Content Management System) or data.json file.
 
-Option 2: Write all content in elements for each page, then hide and unhide the relevant elements using JS as needed.
+ii. Write all content in elements for each page, then hide and unhide the relevant elements using JS as needed.
 
     + Simple to implement.
     - Bad for performance.
     - Still hard to maintain and extend for the same reasons as in the previous approach.
 
-Option 3: Query the CMS (or in the case of this simple web app, the data.json) for the relevant content.
+iii. Query the CMS (or in the case of this simple web app, the data.json) for the relevant content.
 
     + Most scalable and maintainable approach.
     - Extra complexity to set up and hook into a CMS.
@@ -160,6 +161,7 @@ Tablet image cropped:
 Phone image cropped:
 
 ![cropped image 2](/src/assets/img-landscape-2.png)
+
 I brainstormed three different implementation patterns:
 
 i. Google says [write custom hooks for media queries](https://upmostly.com/tutorials/how-to-use-media-queries-in-react) then point `img src` at a template string generated based on the numbered tab state and media query.
