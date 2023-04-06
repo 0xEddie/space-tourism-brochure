@@ -56,7 +56,10 @@ export default function Technology() {
 				<p className="description">{technology[tabNumber - 1].description}</p>
 			</article>
 
-			<img className={imageClasses[tabNumber]} alt="launching vehicle" />
+			<img
+				className={imageClasses[tabNumber]}
+				alt={technology[tabNumber - 1].name}
+			/>
 		</main>
 	);
 }
