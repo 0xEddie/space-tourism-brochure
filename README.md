@@ -211,6 +211,29 @@ iii. Another option would be to only use the larger uncropped images, but using 
 
 I decided to go for the second option as this is the least amount of work to implement. In terms of performance the first option might be the better pattern since you save a render. On this small site it is negligible, but at larger scale this would be one path to investigate for extra performance.
 
+7. Importing images to display in React
+
+Complex JavaScript web apps use bundlers to "build" the app so that it is able to be deployed and run in a browser. If using a build tool like webpack ([Vite uses Rollup](https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild) to bundle during build), then one step of bundling is processing all imported assets in each React component.
+
+For example, instead of explicitly specifying the path to an image file in the JSX of a component (like `<img src="../assets/logo.svg" alt="logo" />`), assets (generally) need to be explicitly imported in the first lines of a component, and then the imported asset can then be referenced by JSX.
+
+```jsx
+import { Logo } from '../assets/logo.svg';
+
+export function Header() {
+	...
+
+	return (
+		<main>
+			<img src={Logo} alt='logo' />
+			...
+		</main>
+	)
+}
+```
+
+[More details](https://levelup.gitconnected.com/display-images-in-react-8ff1f5b1cf9a)
+
 ### Continued Development
 
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
