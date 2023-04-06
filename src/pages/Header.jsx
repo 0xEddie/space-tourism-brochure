@@ -1,6 +1,7 @@
 import './Header.css';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from '../assets/shared/logo.svg';
 
 export default function Header() {
 	const path = useLocation();
@@ -16,11 +17,7 @@ export default function Header() {
 			{/* Images are wrapped in a div, fixes flexbox issue */}
 			{/* TODO: make logo a link to homepage? */}
 			<div className="logo-wrapper">
-				<img
-					src="/src/assets/shared/logo.svg"
-					alt="space tourism logo"
-					className="logo"
-				/>
+				<img src={Logo} alt="space tourism logo" className="logo" />
 			</div>
 
 			<button
