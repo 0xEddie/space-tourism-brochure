@@ -107,7 +107,7 @@ Additionally:
 3. CSS organization
 
 One primitive strategy for organizing styling in an app is simply keeping everything in one big file.
-This is simple, but it can work. I decided against it was annoying to scroll through, and because I would have then had to add a class to each page. That class would be used to specify the background image relative url.
+This is simple, but it can work. I decided against it as I started to build out the site because was annoying to scroll through (which is a hint that something can be improved) That class would be used to specify the background image relative url.
 
 `TODO sample of keeping page styles together?`
 
@@ -145,6 +145,70 @@ Option 3: Query the CMS (or in the case of this simple web app, the data.json) f
 
 After laying out and styling the content on each page, I decided to use queries to the data.json to dynamically load in content. For a simple static site like this, any of the approaches could be appropriate, I just wanted to practice something a little harder but more extendable.
 
+6. Patterns for changing feature image source based on media queries
+
+In the design specification the feature images on the Technology page need to change based on the window size.
+
+Desktop image uncropped:
+
+![uncropped image](/src/assets/img-portrait.png)
+
+Tablet image cropped:
+
+![cropped image 1](/src/assets/img-landscape-1.png)
+
+Phone image cropped:
+
+![cropped image 2](/src/assets/img-landscape-2.png)
+I brainstormed three different implementation patterns:
+
+i. Google says [write custom hooks for media queries](https://upmostly.com/tutorials/how-to-use-media-queries-in-react) then point `img src` at a template string generated based on the numbered tab state and media query.
+
+```jsx
+const [tabNumber, setTabNumber] = useState(1);
+const query = useMediaQuery('desktop');
+const imageClasses = {
+  1: 'launch-vehicle',
+  2: 'spaceport',
+  3: 'space-capsule',
+};
+let imgUrl = `/src/assets/technology/image-${tabTitle}-${query}.jpg`;
+...
+
+<img src={imgUrl} alt={technology[tabNumber - 1].name} />
+```
+
+ii. Give img a className based on a dictionary with keys of the numbered tab state, then load images in CSS by using the `content` attr and media queries
+
+```jsx
+const imageClasses = {
+	1: 'img-launch',
+	2: 'img-port',
+	3: 'img-capsule',
+};
+...
+
+<img
+	className={imageClasses[tabNumber]}
+	alt={technology[tabNumber - 1].name}
+/>;
+```
+
+```css
+.img-launch {
+	content: url('/src/assets/technology/image-launch-vehicle-landscape.jpg');
+}
+@media (min-width: 45em) {
+	.img-launch {
+		content: url('/src/assets/technology/image-launch-vehicle-portrait.jpg');
+	}
+}
+```
+
+iii. Another option would be to only use the larger uncropped images, but using the media query hook created in (i.) the image could be cropped and resized.
+
+I decided to go for the second option as this is the least amount of work to implement. In terms of performance the first option might be the better pattern since you save a render. On this small site it is negligible, but at larger scale this would be one path to investigate for extra performance.
+
 ### Continued Development
 
 - Utility classes are nontrivial to set up, but the benefit is obvious for maintainable cohesive design. I think [Tailwind CSS](https://tailwindcss.com/) could allow for much faster design iteration and would be worth looking into.
@@ -155,7 +219,7 @@ After laying out and styling the content on each page, I decided to use queries 
   - Since this website only contains static, unchanging pages (no user or dynamic information is fetched and displayed), that means this could be refactored to be a Static Site Generated (SSG) application. SSG apps are more performant and better for SEO since they are just static pages rendered at build time. Static sites are also cheaper to host.
   - There is a [Vite plugin](https://vite-plugin-ssr.com/pre-rendering) which allows for easy SSG and would be an excellent next step for development.
 
-- Set up and hook into a CMS (Content Management System) such as [Sanity](https://www.sanity.io/) for site content, instead of querying a data.json file. Using a CMS is often best for easily scaling and managing content for a web app.
+- Set up and hook into a CMS (Content Management System) such as [Sanity](https://www.sanity.io/) for site content, instead of querying a data.json file. Using a CMS is often best for easily scaling and managing content that changes over time for a web app.
   - Optionally: Use the npm package `localforage` to create a fake interface to a CMS [like in this React Router example](https://gist.githubusercontent.com/ryanflorence/1e7f5d3344c0db4a8394292c157cd305/raw/f7ff21e9ae7ffd55bfaaaf320e09c6a08a8a6611/contacts.js). This would be a good step for a learning project without worrying about database setup.
 
 ### Useful Resources
