@@ -1,19 +1,19 @@
 body:has(.grid-container--home) {
-	background-image: url(/src/assets/home/background-home-mobile.jpg);
+	background-image: url(/home/background-home-mobile.jpg);
 	background-size: cover;
 	background-position: bottom center;
 }
 
 @media (min-width: 35em) {
 	body:has(.grid-container--home) {
-		background-image: url(/src/assets/home/background-home-tablet.jpg);
+		background-image: url(/home/background-home-tablet.jpg);
 		background-position: center center;
 	}
 }
 
 @media (min-width: 45em) {
 	body:has(.grid-container--home) {
-		background-image: url(/src/assets/home/background-home-desktop.jpg);
+		background-image: url(/home/background-home-desktop.jpg);
 	}
 }
 
