@@ -1,19 +1,19 @@
 body:has(.grid-container--dest) {
-	background-image: url(/src/assets/destination/background-destination-mobile.jpg);
+	background-image: url(/destination/background-destination-mobile.jpg);
 	background-size: cover;
 	background-position: bottom center;
 }
 
 @media (min-width: 35em) {
 	body:has(.grid-container--dest) {
-		background-image: url(/src/assets/destination/background-destination-tablet.jpg);
+		background-image: url(/destination/background-destination-tablet.jpg);
 		background-position: center center;
 	}
 }
 
 @media (min-width: 45em) {
 	body:has(.grid-container--dest) {
-		background-image: url(/src/assets/destination/background-destination-desktop.jpg);
+		background-image: url(/destination/background-destination-desktop.jpg);
 	}
 }
 
