@@ -6,6 +6,7 @@ export default function Error() {
 
 	return (
 		<main id="main" className="error-page">
+			{/* TODO add styling to error msg */}
 			<h1>lost?</h1>
 			<p>
 				Unexpected error:{' '}

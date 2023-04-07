@@ -1,5 +1,11 @@
 body:has(.error-page) {
+	/* TODO: change bg-pos for mobile and tablet screens */
 	background-image: url(/src/assets/astronaut-floating-in-space-crop.jpg);
 	background-size: cover;
-	background-position: bottom 40% left;
+}
+
+@media (min-width: 45em) {
+	body:has(.error-page) {
+		background-position: bottom 40% left;
+	}
 }
