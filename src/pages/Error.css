@@ -37,15 +37,16 @@ main.error-page article {
 	border-bottom-left-radius: var(--radius);
 	padding-block: 3rem;
 	padding-inline-start: 2rem;
+}
 
-	i {
-		text-align: end;
-	}
+main.error-page article i {
+	text-align: right;
 }
 
 main.error-page a {
 	grid-area: button;
 	justify-self: center;
+	margin-top: 4rem;
 }
 
 @media (min-width: 35em) {
