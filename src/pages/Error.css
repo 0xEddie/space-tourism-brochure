@@ -6,12 +6,46 @@ body:has(.error-page) {
 }
 
 main.error-page {
-	border: 1px solid white;
-	border-right: none;
-	border-top-left-radius: 4em;
-	border-bottom-left-radius: 4em;
-	padding: 3rem;
+	grid-template-areas:
+		'title'
+		'message'
+		'button';
+	justify-items: start;
 	width: fit-content;
+	--radius: 5.5em;
+	margin: 1rem;
+	margin-top: 4rem;
+	padding-inline: 3rem;
+}
+
+main.error-page h1 {
+	grid-area: title;
+	border: 2px solid white;
+	border-left: none;
+	border-top-right-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+	padding-block: 3rem;
+	padding-left: 9rem;
+	padding-right: 2rem;
+}
+
+main.error-page article {
+	grid-area: message;
+	border: 2px solid white;
+	border-right: none;
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+	padding-block: 3rem;
+	padding-inline-start: 2rem;
+
+	i {
+		text-align: end;
+	}
+}
+
+main.error-page a {
+	grid-area: button;
+	justify-self: center;
 }
 
 @media (min-width: 35em) {
