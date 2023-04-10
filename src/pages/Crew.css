@@ -71,13 +71,12 @@ body:has(.grid-container--crew) {
 			minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
 
 		grid-template-areas:
-			'. title title .'
+			'. title image .'
 			'. content image .'
 			'. tabs image .';
 		justify-items: start;
 	}
 
-	/* TODO image should overlap the title? */
 	.grid-container--crew > picture {
 		max-width: 90%;
 		grid-column: span 2;
