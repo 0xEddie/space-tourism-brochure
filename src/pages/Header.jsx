@@ -15,10 +15,9 @@ export default function Header() {
 	return (
 		<header className="primary-header flex">
 			{/* Images are wrapped in a div, fixes flexbox issue */}
-			{/* TODO: make logo a link to homepage? */}
-			<div className="logo-wrapper">
+			<Link to="/" className="logo-wrapper">
 				<img src={Logo} alt="space tourism logo" className="logo" />
-			</div>
+			</Link>
 
 			<button
 				className="mobile-nav-toggle"
