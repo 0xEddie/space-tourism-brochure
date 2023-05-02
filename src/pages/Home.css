@@ -38,7 +38,7 @@ body:has(.grid-container--home) {
 	}
 
 	.grid-container.grid-container--home {
-		/* TODO: too much bottom padding, not enough top padding */
+		padding-top: max(4rem, 10vh);
 		padding-bottom: max(4rem, 10vh);
 		align-content: space-between;
 		--container-gap: 15vw;
