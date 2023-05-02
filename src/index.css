@@ -252,10 +252,8 @@ h6 {
 /*        Components          */
 /* ---------        --------- */
 
-/* TODO: cursor turns to a pointer while over any part of the navbar, but only the _actual button_ is clickable */
 /* Style for buttons for Tabs, Dots, and Numbers */
 .underline-indicators > * {
-	cursor: pointer;
 	padding: var(--underline-gap, 1rem) 0;
 	border: 0;
 	border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
