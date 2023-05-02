@@ -3,7 +3,7 @@
 This is a solution to the space tourism website [challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3), which provides image assets and a style guide in a [Figma file](https://www.figma.com/file/fEvMwK3DALNy5ZiVsY562l/space-tourism-website?node-id=0%3A1&t=uABUmUEvdYazx7ky-1).
 There are no guidelines in the challenge for which technologies to use.
 
-Live demo:
+Live demo: https://space-tourism-brochure.vercel.app/
 
 ## Table of Contents
 
