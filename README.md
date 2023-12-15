@@ -247,6 +247,12 @@ export function Header() {
 - Set up and hook into a CMS (Content Management System) such as [Sanity](https://www.sanity.io/) for site content, instead of querying a data.json file. Using a CMS is often best for easily scaling and managing content that changes over time for a web app.
   - Optionally: Use the npm package `localforage` to create a fake interface to a CMS [like in this React Router example](https://gist.githubusercontent.com/ryanflorence/1e7f5d3344c0db4a8394292c157cd305/raw/f7ff21e9ae7ffd55bfaaaf320e09c6a08a8a6611/contacts.js). This would be a good step for a learning project without worrying about database setup.
 
+- Lazy loading images [useful guide](https://imagekit.io/blog/lazy-loading-images-complete-guide/)
+  - For pages with tabs with multiple images, all the images are downloaded by default on page load. Lazy loading allows for images to be downloaded and shown *only when the user makes them visible on screen*. This saves bandwidth costs and improves initial page load.
+
+- Serve appropriate image size using `srcset`
+  - Instead of using multiple CSS media queries, the `srcset` HTML attribute allows the developer to define multiple image formats that can be served. [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). Not sure if this is better or worse than using media queries.
+
 ### Useful Resources
 
 - [Reduce rendering load of animated box shadows by 10x](https://tobiasahlin.com/blog/how-to-animate-box-shadow/) - Using transform on an element's box-shadow is _extremely_ compute intensive. Using transform on that element's `::after` psuedoelement instead (to create a hover outline effect) is better practice.
